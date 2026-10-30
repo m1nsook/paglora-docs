@@ -1,0 +1,18 @@
+/* The official docs use Paglora's own static-site renderer. */
+:root[data-color-mode="dark"] {
+  --bg: #0b0e14;
+  --fg: #f0f3fb;
+  --muted: #a0abba;
+  --line: #252c37;
+  --subtle: #111722;
+  --hover: #182131;
+  --brand: #7bb4ff;
+  --brand-light: #172a43;
+  --header-bg: rgba(11,14,20,.96);
+}
+.site-header { box-shadow: 0 1px 0 rgba(255,255,255,.025); }
+.site-nav a { border-radius: 8px; }
+.site-nav .nav-group h2 { letter-spacing: .07em; }
+.docs h1 { letter-spacing: -.035em; }
+.docs a { text-underline-offset: 3px; }
+.docs pre { border: 1px solid var(--line); }
