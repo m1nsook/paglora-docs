@@ -37,6 +37,13 @@
       "navGroup": "Studio"
     },
     {
+      "id": "search",
+      "title": "Search and appearance",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Features"
+    },
+    {
       "id": "publishing",
       "title": "Publishing a website",
       "isPublic": true,

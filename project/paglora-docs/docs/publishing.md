@@ -1,6 +1,6 @@
 # Publishing a static website
 
-Paglora exports HTML and CSS that you can upload to a static website host. The published site doesn't need a Paglora subscription, account, or server runtime.
+Paglora exports HTML, CSS and a small first-party JavaScript runtime that you can upload to a static website host. The published site doesn't need a Paglora subscription, account, or server runtime.
 
 ## Build from Studio
 
@@ -16,20 +16,23 @@ index.html
 studio.html
 publishing.html
 styles.css
-custom.css
+paglora.js
+paglora-search.js
+search-index.json
+custom.css       (when configured)
 fonts/
 ```
 
 ## Host the exported site
 
-Upload the **contents of the export folder** to your chosen host. Supported options include GitHub Pages and ordinary static hosting. Host-specific deployment configuration is up to you.
+Upload the **entire contents of the export folder**, including JavaScript and JSON search files, to your chosen host. Supported options include GitHub Pages and ordinary static hosting. Host-specific deployment configuration is up to you.
 
 > [!NOTE]
 > Paglora does not currently publish to GitHub Pages automatically. The planned official documentation website will eventually use GitHub Pages, but publishing remains a separate step.
 
 ## Fonts, images, and CSS
 
-Built sites may use remotely hosted images or optional Google Fonts. The default font assets are bundled. Custom CSS is included when a project contains `theme/custom.css`.
+Built sites may use remotely hosted images or optional Google Fonts. The shipped JavaScript provides search and appearance controls; browsers need to be able to fetch `search-index.json` over HTTP(S). The default font assets are bundled. Custom CSS is included when a project contains `theme/custom.css`.
 
 ## What not to upload
 

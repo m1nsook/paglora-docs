@@ -10,7 +10,13 @@ The CLI can create projects anywhere. Studio currently discovers only the projec
 
 ## Preview doesn't match the hosted site
 
-Confirm that you uploaded the entire generated site folder and included `styles.css`, `custom.css` (if present), and bundled font assets. Check whether your custom CSS references external resources that require an internet connection.
+Confirm that you uploaded the entire generated site folder and included `styles.css`, `custom.css` (if present), bundled font assets, `paglora.js`, `paglora-search.js`, and `search-index.json`. Check whether your custom CSS references external resources that require an internet connection.
+
+## Search works on the hosted site but not in the Studio canvas
+
+The Studio's inline canvas uses a script-disabled preview for safety. Test search and appearance controls in the **built website**, served over HTTP(S). Opening exported HTML directly with a `file://` URL may prevent JavaScript from fetching the JSON index.
+
+If results are missing, check that the page is **Public**, rebuild, and deploy the updated `search-index.json` alongside the HTML and JavaScript assets.
 
 ## My page layout is too narrow
 
