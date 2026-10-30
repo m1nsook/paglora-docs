@@ -10,7 +10,7 @@ This repository will host the **official Paglora documentation website** on GitH
 
 ## Current status
 
-The repository is **private during development**. Its initial [`reference/`](reference/) directory contains the 11 original notes migrated from the application repository. These are historical/technical references, **not** the finished public documentation pages.
+The repository is **private during development**. Its initial [`reference/`](reference/) directory contains the latest engineering notes synchronized from the application repository. These are historical/technical references, **not** the finished public documentation pages.
 
 The Paglora project source and its generated static site will be added when ready. Keep them distinct from the reference notes; do not publish private source material accidentally.
 
