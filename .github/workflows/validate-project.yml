@@ -1,0 +1,30 @@
+name: Validate Paglora docs source
+
+on:
+  pull_request:
+    paths:
+      - "project/**"
+      - ".github/workflows/validate-project.yml"
+  push:
+    branches: [main]
+    paths:
+      - "project/**"
+      - ".github/workflows/validate-project.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Paglora CLI validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate official documentation project
+        run: npm exec --yes --package=paglora@0.0.1-alpha.2 -- paglora validate ./project/paglora-docs
+      - name: Inspect documentation pages
+        run: npm exec --yes --package=paglora@0.0.1-alpha.2 -- paglora inspect ./project/paglora-docs

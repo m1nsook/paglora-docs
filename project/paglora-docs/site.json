@@ -1,0 +1,30 @@
+{
+  "title": "Paglora Docs",
+  "description": "Build, customize, and publish beautiful documentation websites with Paglora.",
+  "footerText": "Paglora · Open source · Built with Paglora",
+  "navigationPosition": "left",
+  "headerAlignment": "left",
+  "stickyHeader": true,
+  "showFooter": true,
+  "contentWidth": 820,
+  "logoUrl": "",
+  "headerLinks": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/m1nsook/paglora"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/paglora"
+    }
+  ],
+  "footerLinks": [
+    {
+      "label": "Issues",
+      "url": "https://github.com/m1nsook/paglora/issues"
+    }
+  ],
+  "themeMode": "dark",
+  "accentColor": "#5B9EFF",
+  "googleFontFamily": ""
+}

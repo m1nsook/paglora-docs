@@ -1,0 +1,61 @@
+{
+  "formatVersion": 1,
+  "pages": [
+    {
+      "id": "index",
+      "title": "Welcome",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Getting Started"
+    },
+    {
+      "id": "installation",
+      "title": "Installation and setup",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Getting Started"
+    },
+    {
+      "id": "first-project",
+      "title": "Your first project",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Getting Started"
+    },
+    {
+      "id": "studio",
+      "title": "Studio canvas",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Studio"
+    },
+    {
+      "id": "pages",
+      "title": "Pages and navigation",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Studio"
+    },
+    {
+      "id": "publishing",
+      "title": "Publishing a website",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Publishing"
+    },
+    {
+      "id": "cli",
+      "title": "Command-line interface",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Reference"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Reference"
+    }
+  ]
+}
