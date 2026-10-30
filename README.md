@@ -1,17 +1,24 @@
 # Paglora documentation
 
-This private repository is the future home of the official **Paglora documentation website**, which will be authored and exported using [Paglora](https://github.com/m1nsook/paglora).
+This repository will host the **official Paglora documentation website** on GitHub Pages. The website will be **built using [Paglora](https://github.com/m1nsook/paglora) itself**, so visitors can learn to use the app while exploring a real site created with it.
+
+## Goals
+
+- **User documentation:** getting started, the editor, pages, visual layouts, site themes, project files, static exporting, troubleshooting and future CLI capabilities.
+- **Live product demo:** the published documentation site demonstrates Paglora's actual output, layout options, navigation, responsive behavior and styling.
+- **Dogfooding:** author and maintain this website as a Paglora project, rather than building it with an unrelated documentation framework.
 
 ## Current status
 
-The documentation website is **in development**. The source material migrated from the application repository lives in [`reference/`](reference/). These files contain architecture notes, compatibility guidance, feature walkthroughs and roadmap material; they are **not** a published or generated documentation website.
+The repository is **private during development**. Its initial [`reference/`](reference/) directory contains the 11 original notes migrated from the application repository. These are historical/technical references, **not** the finished public documentation pages.
 
-When the documentation project is ready, use Paglora Desktop to author its public pages and export a static website. Keep generated website output separate from the original reference notes, and publish only the export intended for visitors.
+The Paglora project source and its generated static site will be added when ready. Keep them distinct from the reference notes; do not publish private source material accidentally.
 
-## Links
+## Publication plan
 
-- [Paglora application repository](https://github.com/m1nsook/paglora)
-- [Issue tracker](https://github.com/m1nsook/paglora/issues)
-- [Discussions](https://github.com/m1nsook/paglora/discussions)
+1. Create and maintain the documentation content in Paglora Desktop.
+2. Preview the site in Paglora and verify that published pages and the real static export match.
+3. Publish the generated output on GitHub Pages, not the raw reference notes. Deployment automation can follow once Paglora's build workflow supports it.
+4. Make the documentation publicly accessible when ready.
 
-The application repository remains the source of truth for executable code and its project-file compatibility contracts. In particular, project-local `docs/*.md` files are **part of Paglora project storage** and are unrelated to the former documentation directory in the application repository.
+The core [Paglora application repository](https://github.com/m1nsook/paglora) remains the source of truth for application code, issues, discussions and compatibility contracts. In particular, individual Paglora projects still use their **own** `docs/*.md` directories: those project storage files are not related to the old repository documentation directory.
