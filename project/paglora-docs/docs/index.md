@@ -12,6 +12,7 @@ This documentation is itself maintained as a **Paglora project**. It demonstrate
 - [Run Paglora Desktop from source](installation.md)
 - [Create your first website](first-project.md)
 - [Explore the Studio canvas](studio.md)
+- [Search and appearance controls](search.md)
 - [Publish a static website](publishing.md)
 
 ## Designed for your workflow
