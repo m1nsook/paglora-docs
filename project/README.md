@@ -2,7 +2,7 @@
 
 `project/paglora-docs/` is the **real Paglora v1 project** powering the official docs. Its Markdown pages and `pages.json` drive navigation; `site.json` and `theme/custom.css` control the website.
 
-The source repository is **public**. The GitHub Pages website is not live until the generated export is uploaded and deployed.
+The source repository is **public** and the generated website is [live on GitHub Pages](https://m1nsook.github.io/paglora-docs/). Changes to this source project will not appear on the live site until you rebuild and commit the generated `site/` export.
 
 ## Validate with the released CLI
 
@@ -21,7 +21,7 @@ The current desktop build discovers projects under its own app data `projects/` 
 
 ## Build and deploy
 
-1. Select **Website → Build static site** in Studio.
+1. Open the latest Paglora Desktop source, select **Website → Build static site** in Studio, and review the publishing report.
 2. Confirm the publishing report, check links, and test the generated HTML/CSS/JavaScript via HTTP(S).
 3. The default `siteUrl` in `site.json` is `https://m1nsook.github.io/paglora-docs/`, including the repository path. If the official domain changes, update the setting in **Design site** before rebuilding.
 4. Place only the generated export files in the top-level **`site/`** directory of this repository, with `site/index.html` at its root; remove an older export before copying.

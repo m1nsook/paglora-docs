@@ -3,7 +3,7 @@
 **Build beautiful documentation locally with Paglora.** Write in Markdown, design your website on a responsive canvas, and export portable static HTML for any host. No visitor account, subscription, or Paglora backend.
 
 > [!NOTE]
-> **This is a Paglora-built website, not a separate docs framework.** Its navigation, cards, callouts, site theme, and content are authored in the same Paglora project described here. The official site is still private during development; GitHub Pages has not been deployed.
+> **This is a Paglora-built website, not a separate docs framework.** Its navigation, cards, callouts, site theme, and content are authored in the same Paglora project described here. The official documentation is public and deployed on GitHub Pages. The source project uses the same features available to other Paglora authors.
 
 ## Start building
 
@@ -15,6 +15,8 @@
 
 > [!CARD] See what you can publish
 > [Try the native Markdown building blocks](components.md), [search and appearance](search.md), and [static publishing](publishing.md).
+
+The three cards above are rendered as a **responsive grid** by Paglora's built-in card layout setting. Narrow reading areas automatically show fewer columns; no custom CSS grid is required.
 
 ## A real documentation website, not a screenshot
 

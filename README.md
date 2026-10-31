@@ -1,18 +1,19 @@
 # Paglora documentation
 
-This **public repository** contains the official Paglora documentation source. The website is built **with [Paglora](https://github.com/m1nsook/paglora) itself** and will be hosted on GitHub Pages once a tested static export is available.
+This **public repository** contains the official Paglora documentation source and its independently generated static site. The website is built **with [Paglora](https://github.com/m1nsook/paglora) itself** and is [live on GitHub Pages](https://m1nsook.github.io/paglora-docs/).
 
 ## Repository layout
 
 - [`project/paglora-docs/`](project/paglora-docs/) — the real Paglora v1 documentation project, including Markdown, page manifest, site settings, and custom CSS.
 - [`project/README.md`](project/README.md) — directions for validating and opening the project.
+- [`site/`](site/) — the generated static website deployed by GitHub Pages (never hand-edit generated files).
 - [`reference/`](reference/) — publicly readable historical engineering/design notes in the repository, **not** pages on the generated website.
 - [`.github/workflows/validate-project.yml`](.github/workflows/validate-project.yml) — project validation with the released npm CLI.
 - [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) — deploys **only** the generated `site/` export to Pages when it exists.
 
 ## Current status — October 31, 2026
 
-The source repository is **public**. The GitHub Pages website is **not deployed yet**: source Markdown is not the same as a built site.
+The source repository is **public**, and the first generated website is [deployed on GitHub Pages](https://m1nsook.github.io/paglora-docs/). Source changes alone do not automatically rebuild the live site: regenerate the static export with Paglora Studio and commit the updated `site/` files.
 
 The current [Paglora source](https://github.com/m1nsook/paglora) includes offline MiniSearch, local images, multilingual metadata, canonical URLs/sitemaps, coordinated light/dark site palettes, and a desktop 0.2.0 publishing report. The public npm CLI **`paglora@0.0.1-alpha.3`** remains available under the `alpha` tag.
 
@@ -29,11 +30,11 @@ bunx --bun paglora@alpha inspect ./project/paglora-docs
 
 GitHub Actions pins `paglora@0.0.1-alpha.3` for reproducible project validation.
 
-## Publish on GitHub Pages
+## Update the live GitHub Pages website
 
 **Site root:** `https://m1nsook.github.io/paglora-docs/`
 
-1. In this repository's **Settings → Pages**, choose **GitHub Actions** as the source. Do not select `main` under **Deploy from a branch**.
+1. GitHub Pages is already configured to deploy via **GitHub Actions**; do not change it to branch publishing.
 2. Use GitHub Desktop to update the repository to `main`. Open the full `project/paglora-docs/` project in Paglora Desktop (see [project instructions](project/README.md)).
 3. In Studio choose **Website → Build static site**. Check the publishing report and test the generated site over HTTP(S). The project already configures the intended Pages URL for canonical links and sitemap.
 4. In the repository's root create a folder named **`site/`**. Copy the **contents** of the generated static export into it (so `site/index.html` exists). For future builds, delete the old `site/` contents first so deleted pages don't linger.

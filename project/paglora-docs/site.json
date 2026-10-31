@@ -30,5 +30,6 @@
   "accentColor": "#5B9EFF",
   "googleFontFamily": "",
   "language": "en",
-  "siteUrl": "https://m1nsook.github.io/paglora-docs/"
+  "siteUrl": "https://m1nsook.github.io/paglora-docs/",
+  "cardLayout": "grid"
 }
