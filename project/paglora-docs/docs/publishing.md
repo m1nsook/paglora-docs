@@ -10,6 +10,8 @@ Paglora produces portable HTML, CSS, fonts, local images, and minified browser J
 4. Review the layout in **Preview site**.
 5. Choose **Website → Build static site**.
 
+While building, Studio first reports actual counts of parsed public Markdown pages, then measured native progress as Rust validates HTML, verifies/copies public images, generates the search index, and writes static pages. Final atomic installation stays indeterminate; Paglora does not invent overall percentages. Project open and backup import/export similarly show a busy state instead of implying completion prematurely.
+
 A generated directory can contain:
 
 ```text
@@ -22,7 +24,7 @@ paglora-search.js
 search-index.json
 sitemap.xml          (only if a published site URL is configured)
 custom.css           (if configured)
-assets/              (if a public page or logo uses local images)
+assets/              (if a public page, published CSS or logo uses local images)
 fonts/               (default Geist font and license)
 licenses/            (bundled MiniSearch MIT notice)
 ```

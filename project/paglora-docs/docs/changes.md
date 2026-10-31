@@ -13,6 +13,16 @@ The `0.2.0` source milestone includes a **publishing report** after **Website â†
 
 A warning does not silently change source content or turn private pages public.
 
+## Studio authoring and reliability
+
+- Monaco Source workspace supports multiple project-owned CSS files, their explicit preview/export order, and safe page/site metadata edit forms.
+- Canvas supports verified duplicate plain-text heading/paragraph edits; uncertain complex structures are not automatically rewritten.
+- The component library has Note, Tip, Important, Warning, Caution and Heading 3 plus drag-to-editor insertion.
+- The image drawer can review and move unused images to recoverable project storage with exact typed confirmation and Restore; portable backups retain CSS sources and recovery images.
+- Live Theme Designer, Monaco Source preview and public Preview use persistent buffers rather than exposing a white iframe during document refresh.
+- Build stages show real native validation, asset and file counts, not estimated installation percentages.
+- Richer authoring has a References builder producing editable Markdown from a small set of basic web bibliography styles.
+
 ## Website design
 
 - Classic, Inset and Reading site layouts, with compatibility defaults for existing projects.
