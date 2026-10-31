@@ -70,7 +70,7 @@ Open **Source → Theme** and choose **Add CSS** to create a separate stylesheet
 
 The cascade is always:
 
-1. Built-in `styles.css` from Paglora.
+1. Built-in content-hashed `_paglora/chunks/css/<hash>.css` from Paglora (the temporary `styles.css` alias is retained for compatibility).
 2. Your project's `theme/custom.css`.
 3. Additional named files in `theme/styles.json`, from top to bottom.
 
