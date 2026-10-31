@@ -21,11 +21,34 @@ Imported images live under your project's `assets/` folder. You can reference th
 
 Use the actual `assets/...` path returned when you import the file. Paglora accepts flat, safe filenames and the supported PNG/JPEG/WebP/GIF image formats. SVG and arbitrary executable files are **not supported** as local imports.
 
-The current UI exposes a local image importer for the **site logo**. A broader image library and drag-and-drop media workflow are still future improvements.
+Studio's **Images** drawer offers a searchable project media browser with previews, alt text, reuse, import, Copy Markdown and Insert. Use **Edit** or **Split** mode to insert an image at the current cursor; Copy Markdown remains available separately.
+
+## CSS background images
+
+Use the actual imported asset path inside a project stylesheet:
+
+```css
+.docs .hero { background-image: url("assets/my-diagram.png"); }
+```
+
+Images referenced by a published stylesheet are packaged with the site just like public-page images. The script-disabled preview inlines validated images so the CSS background appears even without a local HTTP server. Other asset paths, unsafe traversal paths, and executable SVG imports are not supported.
 
 ## What gets published?
 
-The static exporter copies only local images referenced by **public pages** or the configured logo. Unreferenced local images and images referenced only by private pages are left in the project. This keeps static exports smaller and avoids accidentally including unused draft media.
+The static exporter copies only images referenced by **public pages**, **published CSS**, or the configured **logo**. Unreferenced images and images referenced only by private Markdown are left inside the project. This keeps static exports smaller and avoids including draft media.
+
+## Reference audit and recoverable cleanup
+
+From **Images**, use **Audit image references** to see textual references across saved public/private Markdown, registered theme CSS and the configured logo. This is a read-only report; a missing reference is **not proof that an image can be removed**.
+
+Choose **Review unused images** for a stricter native check. Paglora flushes the active editor's autosave, scans current saved project sources and candidate image contents, and refuses cleanup if required source files are missing or unsafe. The review is intentionally conservative: it may retain an image rather than risk an incorrect removal.
+
+To move a candidate, select **Move to recovery** and type its *exact filename*. Rust repeats the source scan and file verification at confirmation. The image moves into the same project's `removed-assets/` directory; it is **not permanently deleted**. Select **Restore** to move it back. Restoration refuses to overwrite an image with the same name.
+
+Portable `.paglora` project backups include both registered source stylesheets and recoverable images. Recoverable images are never published. This cleanup checks supported saved Paglora sources, not arbitrary external app files or uncommitted changes made outside Studio.
+
+> [!CAUTION]
+> Check the candidate list before confirming. Do not treat a cleanup suggestion as a guarantee for undocumented external references. Never delete `removed-assets/` manually if you might want to restore an image.
 
 > [!WARNING]
 > Don't publish the entire Paglora project folder. It can contain private Markdown and unused assets. Publish only the generated website output.

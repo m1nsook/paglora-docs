@@ -51,3 +51,9 @@ The live preview is a script-disabled iframe. Custom CSS may import external fon
 This milestone **does not** compile React/TSX themes yet. The full source workspace will add a project file tree, Markdown/MDX/TSX file editing with this existing Monaco component, TSX component overrides, a safely isolated Vite build pipeline, and synchronized visual/source editing. We deliberately avoid shipping pretend TSX overrides that have no effect on output.
 
 Monaco is an embedded source **editor**, not a full VS Code installation. This milestone edits registered Markdown and CSS files; installing Monaco does **not** automatically enable importing or compiling custom TSX site components. Built sites may continue loading Google Fonts, HTTPS images and other user-selected hosted resources.
+
+## Portable backups and image recovery
+
+Portable `.paglora` archives retain `theme/styles.json`, every registered extra CSS file, and the full stylesheet ordering. Import validation rejects missing, duplicated or unsafe named sources instead of silently dropping them. Legacy single-CSS projects are still valid.
+
+The Images drawer can move conservatively verified unused assets into a project-local `removed-assets/` folder. This is recovery storage, not part of a published static website; the directory is included in portable project backups so imported projects can still restore their images. The final move is revalidated against saved sources and requires exact-filename confirmation.
