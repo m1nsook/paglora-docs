@@ -2,6 +2,12 @@
 
 Paglora's **Design site** panel changes the real documentation renderer used for both the Studio preview and the exported HTML. It is not a screenshot-only mockup.
 
+## Localized design controls
+
+The **Design site** panel now uses community translation catalogs for its visual controls, including theme and palette presets, layout choices, navigation, headers, footers, link editing, save feedback, accessibility labels, and the responsive preview. Select **Settings → Studio language** to choose a reviewed interface translation such as Polish or Korean; English is the fallback for missing messages.
+
+The labels change, but the settings stored in `site.json` remain stable values such as `"siteLayout": "inset"`. This never translates user-authored page titles, links, Markdown or CSS.
+
 ## Choose your site layout
 
 Open a project in Desktop Studio, select **Design site**, and find the website layout choices:
@@ -54,7 +60,7 @@ Use palette variables such as `var(--bg)`, `var(--fg)`, `var(--line)` and `var(-
 
 ## Preview and verify
 
-1. Check **Desktop**, **Tablet**, and **Phone** widths.
+1. Check **Desktop**, **Tablet**, and **Mobile** widths.
 2. Compare Light and Dark; switch System while testing your OS preference.
 3. **Save layout**, then choose **Website → Build static site**.
 4. Open the exported website through HTTP(S) and test its appearance switcher.

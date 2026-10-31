@@ -4,9 +4,9 @@ Paglora can mark published documents with their language and generate useful dis
 
 ## Choose a document language
 
-In **Design site**, choose **Document language**. Current builds support 18 language options: English, Korean, Polish, German, French, Spanish, Japanese, Simplified Chinese, Traditional Chinese, Brazilian Portuguese, Russian, Ukrainian, Arabic, Turkish, Italian, Czech, Hungarian, and Thai.
+In **Design site**, choose **Document language**. The original 18 language options remain available: English, Korean, Polish, German, French, Spanish, Japanese, Simplified Chinese, Traditional Chinese, Brazilian Portuguese, Russian, Ukrainian, Arabic, Turkish, Italian, Czech, Hungarian, and Thai. **New reviewed locale packs**, added from [paglora-lang](https://github.com/m1nsook/paglora-lang) and bundled into Paglora, also become selectable automatically without editing a hardcoded menu.
 
-This sets the HTML `lang` attribute and locale-aware social metadata. **Arabic** uses right-to-left document layout and adjusted navigation, lists, and tables.
+This sets the HTML `lang` attribute and locale-aware social metadata. **Arabic** uses right-to-left document layout and adjusted navigation, lists, and tables. Additional reviewed locale packs may declare `"direction": "rtl"` to enable right-to-left layouts.
 
 > [!NOTE]
 > Language selection **does not translate** Markdown, create translated copies of pages, or add an automatic language switcher. Write your content in the selected language yourself.
@@ -42,6 +42,6 @@ These are static tags, not a guarantee of search-engine indexing or rich preview
 3. Set the correct Pages path in **Published site URL**, then rebuild if the URL changes.
 4. Check `sitemap.xml` and a page's canonical link on the deployed site.
 
-There is no built-in automatic Pages deployment yet. The official `paglora-docs` project is still private and not publicly hosted.
+There is no built-in automatic Pages deployment yet. The [official Paglora Docs project](https://github.com/m1nsook/paglora-docs) and [generated GitHub Pages website](https://m1nsook.github.io/paglora-docs/) are public. The site updates after committing a fresh Studio export to the repository's `site/` directory.
 
 Next: [Publishing a website](publishing.md) or [Search and appearance](search.md).
