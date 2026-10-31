@@ -7,7 +7,7 @@
 | Translation area | Examples | Where to contribute |
 | --- | --- | --- |
 | Studio UI | Navigation, settings, project management | `studio.*` keys in `paglora-lang` |
-| Exported website | Appearance switcher, search-related controls, navigation and code-copy feedback | `site.*` keys |
+| Exported website | Appearance switcher, documentation navigation and code-copy feedback | `site.*` keys |
 | Built-in documentation components | Notes, tips, warnings and other callout headings | `docs.*` keys |
 | Your documentation Markdown | Page titles, guides, examples, links | Directly in **your own** Paglora project |
 
