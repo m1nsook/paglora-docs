@@ -48,14 +48,14 @@
 <p>See the <a href="https://v2.tauri.app/start/prerequisites/" rel="noopener noreferrer">official Tauri prerequisites</a> for the current setup.</p>
 <h2 id="launch-the-studio">Launch the Studio</h2>
 <p>Open the Paglora repository in GitHub Desktop, update to the current <code>main</code>, and run from its <strong>repository root</strong>:</p>
-<pre><code>bun install
+<pre><code class="language-powershell">bun install
 bun run desktop
 </code></pre>
 <p>The frontend-only <code>bun run dev</code> mode cannot access local project folders through Tauri.</p>
 <p>You can find the Studio project directory under <strong>Settings → Local project storage</strong>. Projects are stored locally, without an account.</p>
 <h2 id="public-npm-cli">Public npm CLI</h2>
 <p>The <strong><code>paglora@0.0.1-alpha.3</code></strong> CLI is independently available:</p>
-<pre><code>bunx --bun paglora@alpha --help
+<pre><code class="language-powershell">bunx --bun paglora@alpha --help
 bunx --bun paglora@alpha --version
 </code></pre>
 <p>It can create, inspect and validate project folders. It <strong>cannot</strong> run the Desktop application or export websites.</p>

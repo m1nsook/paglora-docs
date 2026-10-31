@@ -39,25 +39,25 @@
 <article class="docs"><h1>Paglora CLI</h1>
 <p>The public npm package <strong><code>paglora@0.0.1-alpha.3</code></strong> is published under the <strong><code>alpha</code></strong> tag. It creates, inspects, and validates local documentation projects. This is <strong>not</strong> a Desktop installer or website builder.</p>
 <h2 id="install-or-run-without-installing">Install or run without installing</h2>
-<pre><code>bun add --global paglora@alpha
+<pre><code class="language-powershell">bun add --global paglora@alpha
 paglora --version
 </code></pre>
 <p>Or run the published alpha directly:</p>
-<pre><code>bunx --bun paglora@alpha --help
+<pre><code class="language-powershell">bunx --bun paglora@alpha --help
 </code></pre>
 <p>The npm <code>latest</code> tag is separate from the prerelease channel, so use <code>@alpha</code> to get alpha.3.</p>
 <h2 id="create-a-project">Create a project</h2>
-<pre><code>bunx --bun paglora@alpha init ./my-docs --name "My Docs"
+<pre><code class="language-powershell">bunx --bun paglora@alpha init ./my-docs --name "My Docs"
 </code></pre>
 <p>The target directory must <strong>not exist</strong>. It creates <code>paglora.json</code>, <code>pages.json</code>, <code>docs/index.md</code>, and <code>theme/custom.css</code> and will not overwrite an existing folder.</p>
 <h2 id="inspect-and-validate">Inspect and validate</h2>
-<pre><code>bunx --bun paglora@alpha inspect ./my-docs --json
+<pre><code class="language-powershell">bunx --bun paglora@alpha inspect ./my-docs --json
 bunx --bun paglora@alpha validate ./my-docs
 </code></pre>
 <p>Inspection reports pages, layouts, visibility and navigation groups. Validation checks the canonical v1 project format, required files and other rules without rewriting content. Alpha.3 includes stricter argument handling, Unicode label validation, and enforcement that the Overview page stays public.</p>
 <h2 id="windows-npm-powershell-workaround">Windows npm PowerShell workaround</h2>
 <p>On some Windows machines, PowerShell blocks <code>npm.ps1</code> with an execution-policy error. Use the Windows command wrapper without lowering security settings:</p>
-<pre><code>npm.cmd view paglora@alpha version
+<pre><code class="language-powershell">npm.cmd view paglora@alpha version
 npm.cmd dist-tag ls paglora
 </code></pre>
 <h2 id="what-the-cli-cannot-do-yet">What the CLI cannot do yet</h2>

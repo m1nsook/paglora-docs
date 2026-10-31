@@ -82,7 +82,7 @@
 <p>The Design site interface now uses reviewed English, Polish and Korean <a href="https://github.com/m1nsook/paglora-lang" rel="noopener noreferrer">translation packages</a> for tabs, presets, fonts, links and preview controls. Studio language does not translate your Markdown.</p>
 <h2 id="edit-the-actual-project-source">Edit the actual project source</h2>
 <p>Site settings live in <code>site.json</code>. New fields are optional and default to Classic/Original for existing projects:</p>
-<pre><code>{
+<pre><code class="language-json">{
   "siteLayout": "inset",
   "sitePalette": "graphite",
   "themeMode": "system",
@@ -91,7 +91,7 @@
 </code></pre>
 <p>The snippet shows the relevant fields only, <strong>not</strong> a complete replacement for your existing <code>site.json</code>.</p>
 <p>To apply extra polish, open <strong>Source</strong> and edit your project's <code>theme/custom.css</code>:</p>
-<pre><code>/* Keep the accent and palette driven by Design site. */
+<pre><code class="language-css">/* Keep the accent and palette driven by Design site. */
 .docs h1 { letter-spacing: -0.045em; }
 .docs a { text-underline-offset: 3px; }
 .docs pre { border: 1px solid var(--line); }
