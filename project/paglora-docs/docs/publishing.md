@@ -1,15 +1,16 @@
 # Publishing a static website
 
-Paglora exports HTML, CSS and a small first-party JavaScript runtime that you can upload to a static website host. The published site doesn't need a Paglora subscription, account, or server runtime.
+Paglora produces portable HTML, CSS, fonts, local images, and minified browser JavaScript. Visitors do not need a Paglora account or server.
 
 ## Build from Studio
 
-1. Save your documentation content.
-2. Open **Design site** to check your header, navigation, theme, and footer.
-3. Use **Preview site** for a final review.
-4. Select **Website → Build static site**.
+1. Save your documentation.
+2. In **Pages**, confirm which pages are **Public**.
+3. Open **Design site** to set navigation, appearance, accent, language, and optionally a published HTTPS site URL.
+4. Review the layout in **Preview site**.
+5. Choose **Website → Build static site**.
 
-Paglora shows the local export folder. The output contains files such as:
+A generated directory can contain:
 
 ```text
 index.html
@@ -19,23 +20,32 @@ styles.css
 paglora.js
 paglora-search.js
 search-index.json
-custom.css       (when configured)
-fonts/
+sitemap.xml          (only if a published site URL is configured)
+custom.css           (if configured)
+assets/              (if a public page or logo uses local images)
+fonts/               (default Geist font and license)
+licenses/            (bundled MiniSearch MIT notice)
 ```
 
-## Host the exported site
+Exact page HTML filenames follow your public page IDs. The exporter includes **only public pages**; private pages are also omitted from site navigation, search and the sitemap.
 
-Upload the **entire contents of the export folder**, including JavaScript and JSON search files, to your chosen host. Supported options include GitHub Pages and ordinary static hosting. Host-specific deployment configuration is up to you.
+## Host the generated files
 
-> [!NOTE]
-> Paglora does not currently publish to GitHub Pages automatically. The planned official documentation website will eventually use GitHub Pages, but publishing remains a separate step.
+Upload the **contents of the generated export folder**, not the original project source. Keep the scripts, JSON, fonts, licenses, and any generated `assets/` together with the pages.
 
-## Fonts, images, and CSS
+GitHub Pages and other ordinary static hosts work. Serve through **HTTP(S)**: browser restrictions on `file://` can block loading `search-index.json`.
 
-Built sites may use remotely hosted images or optional Google Fonts. The shipped JavaScript provides search and appearance controls; browsers need to be able to fetch `search-index.json` over HTTP(S). The default font assets are bundled. Custom CSS is included when a project contains `theme/custom.css`.
+> [!IMPORTANT]
+> A private page's Markdown may still exist in your **local project**. Never publish the entire project or the engineering `reference/` directory.
 
-## What not to upload
+## GitHub Pages project sites
 
-Avoid publishing your entire project source directory: it can contain private pages and unpublished drafts. Upload only the generated website files.
+If your Pages URL is `https://yourname.github.io/repository/`, include **`/repository/`** when configuring **Published site URL**. Paglora uses this root for canonical links and the optional `sitemap.xml`. Rebuild after changing the URL.
 
-See [Troubleshooting](troubleshooting.md) for common export issues.
+Publishing remains a separate step; Paglora does not automatically commit or deploy your output to GitHub Pages.
+
+## Test the real website
+
+Studio's canvas disables runtime scripts. Before announcing a deployment, verify the hosted website's Search button and Ctrl+K, appearance switching, code-copy controls, images, mobile navigation, and internal links. Check that private pages do not appear in the generated output.
+
+See [Local images](images.md), [Language and SEO](language-seo.md), and [Troubleshooting](troubleshooting.md).
