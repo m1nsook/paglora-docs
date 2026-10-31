@@ -35,6 +35,12 @@ The second command requires the actual generated export path shown by Paglora De
 
 The current desktop build discovers projects under its own app data `projects/` folder. Open **Settings → Local project storage** and copy the entire `project/paglora-docs/` directory there, preserving its name and subdirectories. Open **Paglora Docs** from Studio.
 
+## Source-based automatic GitHub Pages builds
+
+After the headless workflow is enabled, updating `project/paglora-docs/` on `main` **builds and publishes the website in GitHub Actions**, without a running Studio. The runner uses the shared Paglora Rust site renderer rather than reimplementing layouts and palettes. You can also use Actions → **Build and deploy Paglora Docs from source** to run it manually.
+
+Tracked `site/` is a legacy snapshot and is no longer the normal CI deployment source. The old `deploy-pages.yml` workflow remains manual-only for rollback. When editing through Studio, you still need to synchronize the saved project back to `project/paglora-docs/` before GitHub can rebuild it.
+
 ## Build and deploy
 
 1. Open the latest Paglora Desktop source, select **Website → Build static site** in Studio, and review the publishing report.

@@ -48,6 +48,13 @@ There are three distinct locations: your **local Studio project**, this reposito
 
 Use the [Windows sync helper](scripts/sync-from-studio.ps1) to back up and install the latest project, then collect both the saved Studio project and rebuilt export into this checkout. The helper never pushes to GitHub or deploys for you.
 
+## Unattended source builds
+
+Once the [headless build workflow](.github/workflows/build-project-pages.yml) is merged and passes its first deployment, GitHub Actions will **build and deploy directly from `project/paglora-docs/` on every push to `main` that changes project files**. It checks out the Paglora source, sanitizes public Markdown, uses the same Rust HTML/site renderer as Studio, and deploys the generated artifact. No desktop session needs to remain running.
+
+You can also start **Actions → Build and deploy Paglora Docs from source → Run workflow** manually. `site/` remains a legacy tracked snapshot, and the old deployment workflow becomes manual-only so stale files cannot accidentally overwrite a newer source build.
+
+**Important:** Saving changes in Studio is still local. Copy the edited Markdown, site settings, and images back into `project/paglora-docs/` using the sync helper, then push through GitHub Desktop. Only repository source pushes trigger the unattended build. The new workflow must pass its first production run before this is considered verified.
 ## Update the live GitHub Pages website
 
 **Site root:** `https://m1nsook.github.io/paglora-docs/`
