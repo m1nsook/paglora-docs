@@ -1,32 +1,32 @@
 # Pages and navigation
 
-Every Paglora documentation site has an **Overview** page, stored as `docs/index.md`. Other pages are individual Markdown files under `docs/`.
+A Paglora project has an **Overview** page at `docs/index.md`. Additional pages live under `docs/`, with their IDs, order, layout and visibility defined in `pages.json`.
 
-## Organize your site
+## Organize pages
 
-Use the **Pages** sidebar to create, rename, duplicate, reorder, and delete pages. You can mark pages public or private.
+Use the **Pages** sidebar to create, rename, duplicate, reorder, and delete pages. Set each page's navigation group and visibility in its Properties panel. Adjacent pages in the same group are displayed together in a collapsible published sidebar.
 
-For each page, select a **Navigation group** in the Properties panel. Pages with matching adjacent group names appear under the same section heading in the published sidebar.
-
-For example, this documentation uses **Getting Started**, **Studio**, and **Reference** sections.
+This documentation groups topics under **Getting Started**, **Studio**, **Features**, **Publishing**, and **Reference**.
 
 ## Page layouts
 
 | Layout | Best for |
 | --- | --- |
-| Docs | Guides with sidebar navigation and table of contents |
-| Wide | Documentation that needs more article width |
-| Landing | Full-width introductory content |
+| Docs | Guides with sidebar navigation and a table of contents |
+| Wide | Wider documentation content |
+| Landing | Full-width introductory or overview pages |
 
-## Private pages
+## Public and private
 
-Private pages are excluded from the exported website and its navigation. The Overview page always remains public.
+A private page is omitted from exported HTML, sidebar links, local search and generated `sitemap.xml`. **Overview always remains public**, even if a manually edited manifest tries to make it private.
 
 > [!WARNING]
-> Private is an export setting, not access control for arbitrary files you upload yourself. Only upload Paglora's generated static-site output.
+> Privacy is a rule for Paglora's **generated export**. A raw project upload can still expose private Markdown and unreferenced assets. Do not deploy your project source folder.
 
-## Link between pages
+## Links
 
-Use the source Markdown filename, such as `[Studio](studio.md)`. Paglora converts supported internal `.md` links to their exported `.html` counterparts.
+Link to other project pages using their Markdown filenames, such as `[Studio](studio.md)`. Paglora rewrites supported `.md` links and extensionless internal Markdown links to the corresponding exported `.html` pages.
 
-Next: [Customize and publish](publishing.md).
+For published headings, H2/H3/H4 anchors are shareable and support Unicode text.
+
+Next: [Studio](studio.md) or [Publishing](publishing.md).

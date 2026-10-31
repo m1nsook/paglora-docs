@@ -26,5 +26,7 @@
   ],
   "themeMode": "dark",
   "accentColor": "#5B9EFF",
-  "googleFontFamily": ""
+  "googleFontFamily": "",
+  "language": "en",
+  "siteUrl": ""
 }

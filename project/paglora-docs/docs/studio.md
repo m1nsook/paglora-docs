@@ -1,30 +1,33 @@
 # Working in Studio
 
-Paglora Studio combines a documentation editor with a canvas-first workspace.
+Paglora Studio combines a local Markdown editor with a canvas-first website preview.
 
 ## The workspace
 
-- **Pages (left):** create, reorder, and select your site's documentation pages.
-- **Website canvas (center):** inspect the actual responsive site rendering.
-- **Properties (right):** update the selected page's title, navigation group, visibility, and Docs/Wide/Landing layout.
+- **Pages (left):** select, create, reorder and organize documentation pages.
+- **Canvas (center):** inspect the website's current rendering and selected content blocks.
+- **Properties (right):** update page title, layout, navigation group and visibility.
 
-The top toolbar switches between **Edit**, **Split**, and **Canvas**.
+Switch between **Edit**, **Split**, and **Canvas** from the toolbar.
 
-## Responsive artboards
+## Responsive preview
 
-Choose **Desktop**, **Tablet**, or **Phone** to check how the site responds to narrower widths. Zoom using the toolbar, or use supported mouse-wheel gestures. **Fit** scales the artboard to the available Studio space.
+Choose **Desktop**, **Tablet**, or **Phone** to check page layouts. Use the zoom controls and **Fit** to adjust the artboard to your workspace. The preview represents the generated HTML and CSS, not a separate mockup.
 
-The canvas is a preview of the static website, not a separate mockup.
+## Editing
 
-## Editing content
+Select a supported block on the canvas. Simple unformatted headings and paragraphs support contextual or inline editing. Use **Edit** for nested lists, rich text, and links; Paglora avoids silently flattening unsupported formatting.
 
-Click a supported content block on the canvas to select it. Simple, unformatted headings and paragraphs can be edited through the contextual controls or directly on the canvas. For links, nested content, and rich formatting, use **Edit**.
+The source files remain local and edits are automatically saved. Recent builds include safeguards against stale preview responses replacing a different selected page.
 
-> [!TIP]
-> Use the full editor for complex Markdown. Paglora deliberately avoids flattening formatted source into plain text.
+## Design site and local images
 
-## Source and previews
+Use **Design site** to manage header/footer links, content width, appearance, website accent, document language, optional published site URL, and logo images. The local logo import supports PNG, JPEG, WebP, and GIF files up to 5 MiB.
 
-**Source** currently edits the project's CSS with Monaco. It does **not** yet compile arbitrary TSX or MDX components. The roadmap includes richer structured components and a source workspace.
+Use **Source** to edit your project's `theme/custom.css` using Monaco. TSX/MDX component compilation is **not** supported yet.
 
-Next: [Pages and navigation](pages.md).
+## Preview versus published interactions
+
+For security, the inline canvas disables exported-site JavaScript. Search, appearance switching, code copying, and live TOC behavior should be tested on the built HTML served over HTTP(S). Site CSS and page structure remain visible in the canvas.
+
+Next: [Pages and navigation](pages.md), [Search and appearance](search.md), or [Local images](images.md).

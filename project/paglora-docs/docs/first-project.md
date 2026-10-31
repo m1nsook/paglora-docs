@@ -1,30 +1,32 @@
 # Your first project
 
-Create a documentation website from the Studio dashboard.
+Use the Paglora Desktop dashboard to create and publish a local documentation project.
 
 ## 1. Create
 
-Open Paglora Desktop and select **New project**. Give it a name such as *My Docs*. Paglora creates an Overview page and stores the project in its local project directory.
+Select **New project** in Paglora Desktop and name it (for example, *My Docs*). Paglora creates a public Overview page and stores the project under its local application data directory.
 
-## 2. Edit the page
+## 2. Write Markdown
 
-Select the **Edit** mode to write and format Markdown using the rich-text editor. Your changes are automatically saved locally.
+Use **Edit** for the rich-text editor and automatically saved local content. Switch to **Split** for an editor-and-site view or **Canvas** to focus on the rendered website.
 
-Use **Canvas** to see the generated website; use **Split** for the editor and website side by side.
+Add ordinary Markdown, tables, supported callouts, code blocks and links. Public websites also enhance code blocks with copy buttons and headings with permalinks.
 
-## 3. Add pages
+## 3. Organize pages
 
-In the **Pages** sidebar, add additional pages for installation, features, guides, and troubleshooting. Configure each page's navigation group and layout in its **Properties** panel.
+In **Pages**, create additional guides. Assign a navigation group, choose a **Docs**, **Wide**, or **Landing** layout, and mark draft pages **Private**. Overview must remain public.
 
-## 4. Customize
+## 4. Design the website
 
-Use **Design site** for the website's theme and layout settings. Open **Source** to edit `theme/custom.css` with Monaco. Your CSS affects the preview and exported website.
+Open **Design site** to set the header, navigation, links, accent, default appearance, document language, and optional published site URL. Import a local PNG/JPEG/WebP/GIF **logo** if needed. Use **Source** to customize `theme/custom.css` through Monaco.
 
-## 5. Export
+## 5. Export and test
 
-Select **Website → Build static site**. Paglora saves a folder with the generated HTML, CSS, and required font assets. Upload the **contents** of that folder to your static host.
+Choose **Website → Build static site**. Paglora creates HTML, CSS, runtime JavaScript, `search-index.json`, fonts, and any referenced public local assets. If you configured a published HTTPS root, it also generates canonical links and a public-only sitemap.
+
+Serve the export through HTTP(S) to test search, appearance and code-copy interactions; the Studio canvas intentionally runs without site JavaScript.
 
 > [!IMPORTANT]
-> The project's `docs/*.md` files are source content. The generated website is separate and will be replaced by the next build.
+> Your original `docs/*.md` files are **source**, not the upload destination. Only publish the generated website files; the project folder can contain private drafts.
 
-Next: [Working with Studio](studio.md) and [Publishing](publishing.md).
+Next: [Studio](studio.md), [Local images](images.md), and [Publishing](publishing.md).
