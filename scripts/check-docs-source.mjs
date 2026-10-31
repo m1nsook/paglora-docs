@@ -14,5 +14,16 @@ for (const doc of docs) {
   if (/^>\s*\\\[!(?:NOTE|TIP|CARD|STEPS|WARNING|IMPORTANT|CAUTION)\\\]/m.test(body)) issues.push(doc+": escaped Markdown marker (must be [!NOTE], not \\[!NOTE\\])");
   if (/still private during development|GitHub Pages has not been deployed|still private and not publicly hosted/i.test(body)) issues.push(doc+": stale private/deployment claim");
 }
+const catalogNames = ["cards","callouts","steps","tabs","code-groups","code-blocks",
+  "disclosures","tables","task-lists","images","typography","lists","links","dividers"];
+for (const name of catalogNames) {
+  const id = "component-"+name;
+  const entry = pages.find(p => p.id === id);
+  if (!entry?.isPublic || entry.navGroup !== "Components") issues.push(id+": missing public catalog navigation");
+  const source = docs.includes(id+".md") ? readFileSync(join(docDir,id+".md"),"utf8") : "";
+  if (!source.includes("\n## Preview\n") || !source.includes("\n## Markdown\n") ||
+      !source.includes(String.fromCharCode(96).repeat(4)+"markdown\n"))
+    issues.push(id+": missing live preview or copyable Markdown snippet");
+}
 if (issues.length) { console.error(issues.join("\n")); process.exitCode = 1; }
 else console.log("Docs source checks passed. Remember to rebuild and commit site/ to update GitHub Pages.");

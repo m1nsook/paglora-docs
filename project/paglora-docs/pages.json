@@ -52,10 +52,108 @@
     },
     {
       "id": "components",
-      "title": "Markdown building blocks",
+      "title": "Components",
       "isPublic": true,
       "layout": "docs",
-      "navGroup": "Features"
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-cards",
+      "title": "Cards",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-callouts",
+      "title": "Callouts",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-steps",
+      "title": "Steps",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-tabs",
+      "title": "Tabs",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-code-groups",
+      "title": "Code groups",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-code-blocks",
+      "title": "Code blocks",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-disclosures",
+      "title": "Disclosures",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-tables",
+      "title": "Tables",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-task-lists",
+      "title": "Task lists",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-images",
+      "title": "Images",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-typography",
+      "title": "Typography",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-lists",
+      "title": "Lists",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-links",
+      "title": "Links",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
+      "id": "component-dividers",
+      "title": "Separators",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
     },
     {
       "id": "search",
