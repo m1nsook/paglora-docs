@@ -1,30 +1,34 @@
 # Paglora-authored documentation project
 
-`project/paglora-docs/` is the **real Paglora v1 project** for the official docs site. Its Markdown pages and `pages.json` drive the user-facing navigation; `site.json` and `theme/custom.css` configure appearance.
+`project/paglora-docs/` is the **real Paglora v1 project** powering the official docs. Its Markdown pages and `pages.json` drive navigation; `site.json` and `theme/custom.css` control the website.
 
-The docs are a development draft in a **private repository**. There is no public GitHub Pages deployment yet.
+The source repository is **public**. The GitHub Pages website is not live until the generated export is uploaded and deployed.
 
 ## Validate with the released CLI
 
-From the **repository root**:
+From the repository root:
 
 ```powershell
 bunx --bun paglora@0.0.1-alpha.3 validate ./project/paglora-docs
 bunx --bun paglora@0.0.1-alpha.3 inspect ./project/paglora-docs
 ```
 
-These commands do not build or publish a website. The [validation workflow](../.github/workflows/validate-project.yml) runs the same published CLI automatically.
+These commands do not build or publish a website. The [validation workflow](../.github/workflows/validate-project.yml) runs the pinned CLI automatically.
 
 ## Open in Studio
 
-The current desktop build discovers projects in its own app data `projects/` folder. Open **Settings → Local project storage** and copy the entire `project/paglora-docs/` directory to that location, preserving its name and subdirectories. You can then open **Paglora Docs** from the Studio.
+The current desktop build discovers projects under its own app data `projects/` folder. Open **Settings → Local project storage** and copy the entire `project/paglora-docs/` directory there, preserving its name and subdirectories. Open **Paglora Docs** from Studio.
 
-## Build the site
+## Build and deploy
 
-Choose **Website → Build static site** in Studio. Review exported HTML, runtime JavaScript, search, images, language metadata and appearance. Publish only the generated static output, **not** `project/` or `reference/`.
+1. Select **Website → Build static site** in Studio.
+2. Confirm the publishing report, check links, and test the generated HTML/CSS/JavaScript via HTTP(S).
+3. The default `siteUrl` in `site.json` is `https://m1nsook.github.io/paglora-docs/`, including the repository path. If the official domain changes, update the setting in **Design site** before rebuilding.
+4. Place only the generated export files in the top-level **`site/`** directory of this repository, with `site/index.html` at its root; remove an older export before copying.
+5. Commit and push the generated files with GitHub Desktop. The Pages workflow publishes the `site/` directory, provided **Settings → Pages → Source** is set to **GitHub Actions**.
 
-When GitHub Pages is ready, set the exact HTTPS root and trailing slash in **Design site → Published site URL**, then rebuild. The current `site.json` intentionally leaves this field blank until the deployment URL is confirmed.
+Never copy the editable `project/` or engineering `reference/` directories into `site/`.
 
 ## Related files
 
-The [`reference/`](../reference/) directory is retained for engineering history and should not be exposed as public documentation.
+The [`reference/`](../reference/) directory contains engineering history. It is visible in this **public repository** but intentionally excluded from the deployed docs website.

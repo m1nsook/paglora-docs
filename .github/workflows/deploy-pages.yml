@@ -1,0 +1,60 @@
+name: Deploy generated Paglora docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publish generated website only
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out site artifact
+        uses: actions/checkout@v4
+
+      - name: Verify Paglora export is present
+        shell: bash
+        run: |
+          for file in index.html styles.css paglora.js paglora-search.js search-index.json; do
+            if [ ! -f "site/$file" ]; then
+              echo "::error::Missing site/$file. Build with Paglora Desktop, then copy the generated output into site/."
+              exit 1
+            fi
+          done
+
+          if [ -d site/project ] || [ -d site/reference ] || [ -d site/docs ]; then
+            echo "::error::Do not publish raw Paglora project or reference directories."
+            exit 1
+          fi
+
+          if find site -type f -name '*.md' -print -quit | grep -q .; then
+            echo "::error::The website export must not include raw Markdown sources."
+            exit 1
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload generated site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
