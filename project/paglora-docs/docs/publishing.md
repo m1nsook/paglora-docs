@@ -24,6 +24,9 @@ _paglora/
     <content-hash>.js
     css/
       <content-hash>.css
+pages/
+  index.html          (compact noindex compatibility mirror)
+  publishing.html     (compact noindex compatibility mirror)
 styles.css          (temporary legacy compatibility alias)
 paglora.js          (temporary legacy compatibility alias)
 paglora-search.js   (temporary legacy compatibility alias)
