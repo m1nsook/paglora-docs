@@ -9,6 +9,7 @@
   "showFooter": true,
   "contentWidth": 800,
   "logoUrl": "assets/paglora512x512-18e38dba083d91d0-0.png",
+  "faviconUrl": "assets/paglora512x512-18e38dba083d91d0-0.png",
   "headerLinks": [
     {
       "label": "GitHub",
