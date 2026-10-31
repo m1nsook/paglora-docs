@@ -1,27 +1,38 @@
 # Build documentation with Paglora
 
-Paglora is a **free, open-source, local-first documentation studio**. Create and edit your documentation visually, own the source files, and export a static website that you can host anywhere.
+Paglora is a **free, open-source, local-first documentation studio**. Write Markdown, shape your website visually, and export static files to host anywhere without running a Paglora server.
 
-This documentation is itself maintained as a **Paglora project**. It demonstrates the same layouts, page navigation, Markdown content, and styling available in the desktop application.
+**This documentation is itself a Paglora project.** The pages, navigation and stylesheet in this private repository will become the public Paglora docs and live demo when GitHub Pages is ready.
 
 > [!NOTE]
-> Paglora is under active development. Some advanced components and source-compilation features described in the roadmap are not available yet.
+> The Windows Desktop Studio is in active development and currently runs from source. The separate npm CLI is available as **`paglora@0.0.1-alpha.3`**; it manages local projects but does not build sites.
 
 ## Start here
 
-- [Run Paglora Desktop from source](installation.md)
-- [Create your first website](first-project.md)
+- [Install and run Paglora Desktop](installation.md)
+- [Create your first project](first-project.md)
+- [What's new in the October development sprint](changes.md)
 - [Explore the Studio canvas](studio.md)
-- [Search and appearance controls](search.md)
-- [Publish a static website](publishing.md)
+- [Organize pages and navigation](pages.md)
 
-## Designed for your workflow
+## Site features
 
-- **Visual editing:** the Studio canvas previews the real website while Tiptap edits Markdown.
-- **Source ownership:** project files stay on your computer; use Monaco for custom CSS.
-- **Responsive output:** check desktop, tablet, and phone layouts.
-- **Flexible hosting:** export HTML and CSS, then deploy wherever you prefer.
+- [Search, light/dark appearance and reading controls](search.md)
+- [Import local images and logos](images.md)
+- [Configure document language and SEO](language-seo.md)
+- [Build and publish a static website](publishing.md)
 
-## Explore further
+## What Paglora offers today
 
-Visit the [CLI reference](cli.md) to create and validate a project using the public npm package, or read [Troubleshooting](troubleshooting.md) for common issues.
+- **Local editing:** Tiptap for Markdown, a visual canvas, and Monaco for project-owned CSS.
+- **Portable output:** HTML, CSS, bundled fonts, and minified interactive scripts.
+- **Document navigation:** collapsible sidebar groups, table of contents, breadcrumbs and page links.
+- **Offline browser search:** bundled MiniSearch, typo-tolerant matching and CJK substring support.
+- **Site design:** responsive widths, light/dark/system modes, a custom accent, and a document-language setting.
+- **Selective publishing:** only public pages, their referenced local assets, and public metadata are exported.
+
+## Reference and support
+
+The [CLI guide](cli.md) explains `init`, `inspect`, and `validate`. Use [Troubleshooting](troubleshooting.md) for common export and preview problems.
+
+Planned features such as a full drag-and-drop website builder, user-authored TSX/MDX compilation, and one-click deployment are **not yet implemented**.

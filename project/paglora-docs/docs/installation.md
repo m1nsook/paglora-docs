@@ -1,34 +1,41 @@
 # Installation and setup
 
-Paglora Desktop is currently an early-development Tauri 2 application. For now, use the application source repository to run the Studio on Windows.
+Paglora Desktop is currently a **Tauri 2 early-development application** with no stable Windows installer release. Run the Studio from the [official source repository](https://github.com/m1nsook/paglora).
 
-## Requirements
+## Windows prerequisites
 
-- Windows with the Tauri 2 / WebView2 prerequisites installed
-- [Bun](https://bun.sh/) and a compatible Node.js toolchain
-- Rust and the Windows build tools required by Tauri
+- Windows 11 with WebView2 and the Tauri 2 Windows C++ build prerequisites.
+- [Bun](https://bun.sh/) for the workspace and development commands.
+- [Rust](https://rustup.rs/) and the appropriate Windows toolchain.
+- Node.js 20 or newer for running standalone Node test commands.
 
-See the [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/) for current platform setup.
+See the [official Tauri prerequisites](https://v2.tauri.app/start/prerequisites/) for the current setup.
 
-## Run Studio
+## Launch the Studio
 
-Open the [Paglora source repository](https://github.com/m1nsook/paglora) in GitHub Desktop. From the repository root, run:
+Open the Paglora repository in GitHub Desktop, update to the current `main`, and run from its **repository root**:
 
 ```powershell
 bun install
 bun run desktop
 ```
 
-The Studio stores its projects locally. You can see the folder under **Settings → Local project storage**.
+The frontend-only `bun run dev` mode cannot access local project folders through Tauri.
 
-## Using the CLI
+You can find the Studio project directory under **Settings → Local project storage**. Projects are stored locally, without an account.
 
-You can try the independent npm CLI without building the desktop app:
+## Public npm CLI
+
+The **`paglora@0.0.1-alpha.3`** CLI is independently available:
 
 ```powershell
 bunx --bun paglora@alpha --help
+bunx --bun paglora@alpha --version
 ```
 
-The CLI currently creates and validates projects. It does not build static sites yet; exporting remains a Studio feature.
+It can create, inspect and validate project folders. It **cannot** run the Desktop application or export websites.
 
-Next: [Create your first project](first-project.md).
+> [!TIP]
+> If Windows PowerShell blocks `npm.ps1`, invoke **`npm.cmd`** instead (for example, `npm.cmd view paglora@alpha version`). You do not need to change the execution policy.
+
+Next: [Create your first project](first-project.md) or [CLI reference](cli.md).

@@ -23,6 +23,13 @@
       "navGroup": "Getting Started"
     },
     {
+      "id": "changes",
+      "title": "What's new",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Getting Started"
+    },
+    {
       "id": "studio",
       "title": "Studio canvas",
       "isPublic": true,
@@ -39,6 +46,20 @@
     {
       "id": "search",
       "title": "Search and appearance",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Features"
+    },
+    {
+      "id": "images",
+      "title": "Local images",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Features"
+    },
+    {
+      "id": "language-seo",
+      "title": "Language and SEO",
       "isPublic": true,
       "layout": "docs",
       "navGroup": "Features"

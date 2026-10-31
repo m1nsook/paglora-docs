@@ -1,32 +1,38 @@
 # Search and appearance
 
-Paglora-generated static websites include interactive features while keeping their content as ordinary HTML and CSS.
+Paglora exports readable static HTML plus two small, minified JavaScript files for client-side enhancements. No hosted search service or visitor account is required.
 
-## Search your documentation
+## Offline search with MiniSearch
 
-Open the command-style search dialog using **Ctrl+K** (or **Cmd+K** on macOS). Type words from a public page's title or body, then use the **Up** and **Down** keys to choose a result and **Enter** to open it.
+On a published site, select **Search** or press **Ctrl+K** (on macOS, **Cmd+K**). Enter a title, phrase, or word from a public page. Search supports prefix matches, typo-tolerant fallback, and substring matching for Korean, Japanese, and Chinese text.
 
-The search system uses `search-index.json` generated during **Build static site**. The index contains only pages configured as **Public**. Search runs in the visitor's browser; there is no requirement for a third-party search account or a backend.
+Use **Up/Down** to navigate results, **Home/End** to jump between results, **Enter** to open a page, and **Escape** to close. Keyboard selection and loading/error messages are announced accessibly. The dialog can retry if loading fails.
 
-> [!NOTE]
-> The current release uses basic text matching and title-aware ranking. Full fuzzy matching, language-specific ranking and advanced indexing are planned improvements.
+The static export contains `search-index.json` with **only public pages**. The `paglora-search.js` browser bundle includes MiniSearch; no external CDN is needed. Search runs in the visitor's browser. The package's MIT notice is included in the exported `licenses/` folder.
 
-## Light, dark and system appearance
+> [!IMPORTANT]
+> A page marked private is excluded from navigation, search, the sitemap, and published HTML. This does not make project files safe to upload: only deploy the **generated export**, not the editable project directory.
 
-Use the **Appearance** control in the published website header to cycle between Light, Dark, and System modes. The chosen appearance is stored in the visitor's browser where browser storage is available.
+## Appearance and accent
 
-This is independent of the Studio's appearance. Site colors and typography are still configurable in **Design site** and your project's `theme/custom.css`.
+The published header's **Appearance** control cycles through **Light**, **Dark**, and **System**. The preference is remembered where browser storage permits and can synchronize between open tabs on the same site.
 
-## Active table of contents
+Choose your site's default appearance and **Website accent color** in **Design site**. The custom accent applies to both light and dark palettes, including system-dark mode, in current source builds. Project-owned `theme/custom.css` can override the built-in styles.
 
-The **On this page** navigation highlights the active section as the reader scrolls. The underlying heading links keep working even if JavaScript is disabled.
+The published site's appearance is independent of the desktop app's appearance.
 
-## Why these features aren't in the Studio canvas
+## Page reading improvements
 
-For safety, Paglora's current editor canvas disables scripts from the generated page. Site runtime interactions therefore need to be tested in the exported website served through HTTP(S), not in the edit canvas.
+- The **On this page** outline tracks nearby headings in desktop and mobile views.
+- H2, H3 and H4 headings offer shareable `#` permalinks, including Unicode headings.
+- Code blocks have **Copy** controls with accessible progress and success/failure feedback.
+- Markdown task lists and collapsible disclosure blocks render without an additional website framework.
+- Callouts support `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, and `CAUTION`.
 
-## Which files should I upload?
+## Preview versus published website
 
-Keep `index.html`, other page HTML files, `styles.css`, `paglora.js`, `paglora-search.js`, and `search-index.json` together on your static host. Missing runtime files won't stop people reading the content, but they will disable their corresponding interactive features.
+Studio's inline canvas deliberately disables browser scripts for safety. The static HTML and CSS are previewed, but live search, appearance switching, and code-copy controls must be tested in the **exported** website served over HTTP(S). Opening `index.html` through `file://` can prevent the search index from loading.
 
-Next: [Publishing a website](publishing.md) or [Troubleshooting](troubleshooting.md).
+Keep `paglora.js`, `paglora-search.js`, `search-index.json`, `styles.css`, and the rest of the export together. Do not upload just the HTML files.
+
+Next: [Local images](images.md), [Language and SEO](language-seo.md), or [Publishing](publishing.md).
