@@ -24,6 +24,8 @@ The source files remain local and edits are automatically saved. Recent builds i
 
 Use **Design site** to manage header/footer links, content width, appearance, website accent, document language, optional published site URL, and logo images. The local logo import supports PNG, JPEG, WebP, and GIF files up to 5 MiB.
 
+Open **Images** for the reusable media drawer: import, search, preview, add alt text, insert images, audit references, and review **recoverable unused-image cleanup**. Candidates require typed confirmation and can be restored. [Media guide](images.md).
+
 Use **Source** to edit your project's Markdown and CSS in Monaco. The Theme section shows `custom.css` and any additional registered stylesheets, with an ordered cascade you can change using the Up/Down controls. **Add CSS** creates a new named stylesheet; all files are local to the project.
 
 Styles apply in the same order in Preview and static Build: Paglora's built-in CSS, then `custom.css`, then extra files listed in `theme/styles.json` (last declaration wins). The generated `custom.css` export contains the combined source, with source comments showing the original file boundaries.
