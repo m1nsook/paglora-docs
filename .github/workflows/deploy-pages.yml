@@ -33,6 +33,10 @@ jobs:
             fi
           done
 
+          if [ -d site/_paglora ]; then
+            test -d site/_paglora/chunks/css || { echo "::error::Missing _paglora chunks CSS"; exit 1; }
+            grep -q '_paglora/chunks/' site/index.html || { echo "::error::Missing chunk references"; exit 1; }
+          fi
           if [ -d site/project ] || [ -d site/reference ] || [ -d site/docs ]; then
             echo "::error::Do not publish raw Paglora project or reference directories."
             exit 1
