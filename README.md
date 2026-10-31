@@ -28,7 +28,7 @@ The source repository is **public**, and the first generated website is [deploye
 
 The current [Paglora source](https://github.com/m1nsook/paglora) includes offline MiniSearch, local images, multilingual metadata, canonical URLs/sitemaps, coordinated light/dark site palettes, and a desktop 0.2.0 publishing report. The public npm CLI **`paglora@0.0.1-alpha.3`** remains available under the `alpha` tag.
 
-The CLI can create, inspect and validate projects; it **does not build websites**. Static export currently requires Paglora Desktop running from source on Windows.
+The npm CLI can create, inspect and validate projects; it **does not build websites**. Static exports use Paglora Desktop or the separate headless Rust builder used by this repository's GitHub Actions workflow.
 
 ## Validate the docs source
 
@@ -45,7 +45,7 @@ GitHub Actions pins `paglora@0.0.1-alpha.3` for reproducible project validation.
 
 **Design site → Save layout updates only the local Tauri project.** It does not update the GitHub repository or the deployed site.
 
-There are three distinct locations: your **local Studio project**, this repository's editable **`project/paglora-docs/`**, and its generated **`site/`** folder. GitHub Pages publishes **only `site/`**. The theme changes from the October 31 Studio export did appear in generated HTML, but older local project content simultaneously overwrote newer docs source. Install the repository's newest project into Studio **before** editing to avoid losing recently added pages.
+There are three distinct locations: your **local Studio project**, this repository's editable **`project/paglora-docs/`**, and the legacy generated **`site/`** snapshot. Normal GitHub Pages deployment is built from the project source, while the snapshot workflow is manual-only. The theme changes from the October 31 Studio export did appear in generated HTML, but older local project content simultaneously overwrote newer docs source. Install the repository's newest project into Studio **before** editing to avoid losing recently added pages.
 
 Use the [Windows sync helper](scripts/sync-from-studio.ps1) to back up and install the latest project, then collect both the saved Studio project and rebuilt export into this checkout. The helper never pushes to GitHub or deploys for you.
 
