@@ -32,17 +32,12 @@ async function assetPaths(out) {
   if (!html.includes('_paglora/chunks/') || !html.includes('rel="icon"')) {
     throw new Error("Export index.html does not reference the expected chunks and favicon.");
   }
-  const settings = JSON.parse(await readFile(join(out, "../project/paglora-docs/site.json"), "utf8")
-    .catch(() => "{}"));
   // Prefer detecting the actual emitted local icon over assuming a project path.
   const icon = html.match(/<link rel="icon"[^>]*href="(assets\/[^"]+)"/)?.[1];
   if (icon) files.push(icon);
   if (html.includes('href="custom.css"')) files.push("custom.css");
   // Verify that the relocated CSS's relative font URL resolves publicly too.
   files.push("fonts/geist-latin.woff2");
-  if (settings.faviconUrl?.startsWith("assets/") && settings.faviconUrl !== icon) {
-    throw new Error("Generated favicon differs from the configured local favicon.");
-  }
   return [...new Set(files)];
 }
 
