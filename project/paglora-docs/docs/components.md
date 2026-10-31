@@ -24,6 +24,7 @@ Browse all currently supported, reusable Paglora Markdown components. Each entry
 ## Feedback
 
 - [Callouts](component-callouts.md) — Note, Tip, Important, Warning and Caution messages.
+- [Status badges](component-badges.md) — Small, semantic labels for releases and availability.
 
 ## Data
 
