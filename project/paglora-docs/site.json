@@ -24,7 +24,9 @@
       "url": "https://github.com/m1nsook/paglora/issues"
     }
   ],
-  "themeMode": "dark",
+  "themeMode": "system",
+  "siteLayout": "inset",
+  "sitePalette": "graphite",
   "accentColor": "#5B9EFF",
   "googleFontFamily": "",
   "language": "en",
