@@ -28,6 +28,13 @@ A warning does not silently change source content or turn private pages public.
 - Public-page-only image inclusion and search index generation.
 - Document-language options (including Arabic RTL) and optional canonical URLs and sitemap.
 
+## Community translation infrastructure
+
+- The separate [paglora-lang](https://github.com/m1nsook/paglora-lang) repository now accepts fork-based translation pull requests and language requests through issue forms.
+- Initial catalog keys cover Studio interface elements, documentation-site chrome, and built-in callout labels, with English fallback for missing strings.
+- Studio supports a local language preference in Settings; only the migrated UI surfaces are translated so far.
+- Reviewed catalogs are bundled offline. Document Markdown remains user-authored and is never automatically translated.
+
 ## Public npm CLI
 
 **`paglora@0.0.1-alpha.3`** is published under the npm `alpha` tag, with `init`, `inspect` and `validate`. It **does not build websites**; export currently requires Desktop Studio.

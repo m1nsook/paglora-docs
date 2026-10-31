@@ -37,6 +37,7 @@ This project demonstrates the same features that your own documentation can use:
 - **Testing actual rendered features?** Visit [Markdown building blocks](components.md).
 - **Publishing to GitHub Pages?** Start with [Publishing a static website](publishing.md).
 - **Automating project setup?** Use the [npm CLI reference](cli.md).
+- **Want Paglora in your language?** [Contribute translations](translations.md) through the community language repository.
 - **Following development?** Read [What's new](changes.md).
 
 > [!IMPORTANT]
