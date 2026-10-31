@@ -47,7 +47,7 @@ Tracked `site/` is a legacy snapshot and is no longer the normal CI deployment s
 2. Confirm the publishing report, check links, and test the generated HTML/CSS/JavaScript via HTTP(S).
 3. The default `siteUrl` in `site.json` is `https://m1nsook.github.io/paglora-docs/`, including the repository path. If the official domain changes, update the setting in **Design site** before rebuilding.
 4. Update both the edited source project and the static website export. The `Collect` command above performs both copies with backups; for a manual update, replace both `project/paglora-docs/` and `site/`.
-5. Commit and push the generated files with GitHub Desktop. The Pages workflow publishes the `site/` directory, provided **Settings → Pages → Source** is set to **GitHub Actions**.
+5. Commit and push the updated `project/paglora-docs/` source with GitHub Desktop. The source-driven Pages workflow rebuilds it using the shared Rust renderer, provided **Settings → Pages → Source** is set to **GitHub Actions**.
 
 Never copy the editable `project/` or engineering `reference/` directories into `site/`.
 
