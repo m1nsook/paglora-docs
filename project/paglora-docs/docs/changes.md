@@ -30,6 +30,13 @@ A warning does not silently change source content or turn private pages public.
 - Independent accent selection in all modes and optional project-owned CSS.
 - Docs, Wide and Landing layouts remain available per page.
 
+## Publishing preparation (not yet a stable release)
+
+- Prepared content-addressed JavaScript and CSS bundles in `_paglora/chunks/` and compact `pages/` HTML mirrors. Existing root HTML pages remain canonical to preserve bookmarks, navigation, search and SEO.
+- Added published-site favicon settings: an HTTPS image URL or a locally generated transparent 64 × 64 PNG from an uploaded image.
+- The official docs build workflow will verify chunk output, the icon and mirrored pages after the dependent main Paglora publishing PR is merged and passes a real deployment.
+- The independent modern Windows installer and signing/updater integration remain a separate release blocker; no stable version is announced from these source changes alone.
+
 ## Publishing and runtime
 
 - Bundled, minified browser scripts and **MiniSearch**, with prefix and typo-tolerant matching plus CJK substring support.
