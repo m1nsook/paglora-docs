@@ -12,6 +12,11 @@ This page is a **live showcase of Paglora's own renderer**. Everything below is 
 
 Cards can be inserted through the **Card** tool in Studio's block palette or authored in Markdown with a blockquote starting `[!CARD] Title`.
 
+With **Design site → Theme → Documentation card layout → Responsive grid**, consecutive cards appear in balanced columns, automatically stacking in narrow article widths. If you put a paragraph or heading between two cards, they remain in separate groups. Older sites default to **Stacked** until you choose the grid option.
+
+> [!TIP]
+> A single `[!CARD]` block stays full width; add two or more cards together to activate a grid. See [Design site](design.md) for the visual setting.
+
 ## Callouts
 
 > [!NOTE]
