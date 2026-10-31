@@ -72,6 +72,13 @@
       "navGroup": "Components"
     },
     {
+      "id": "component-badges",
+      "title": "Status badges",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Components"
+    },
+    {
       "id": "component-steps",
       "title": "Steps",
       "isPublic": true,
