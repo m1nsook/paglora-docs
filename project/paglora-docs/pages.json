@@ -37,11 +37,25 @@
       "navGroup": "Studio"
     },
     {
+      "id": "design",
+      "title": "Design site",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Studio"
+    },
+    {
       "id": "pages",
       "title": "Pages and navigation",
       "isPublic": true,
       "layout": "docs",
       "navGroup": "Studio"
+    },
+    {
+      "id": "components",
+      "title": "Markdown building blocks",
+      "isPublic": true,
+      "layout": "docs",
+      "navGroup": "Features"
     },
     {
       "id": "search",

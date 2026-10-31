@@ -1,38 +1,43 @@
-# Build documentation with Paglora
+# Documentation that looks as good as it reads
 
-Paglora is a **free, open-source, local-first documentation studio**. Write Markdown, shape your website visually, and export static files to host anywhere without running a Paglora server.
-
-**This documentation is itself a Paglora project.** The pages, navigation and stylesheet in this private repository will become the public Paglora docs and live demo when GitHub Pages is ready.
+**Build beautiful documentation locally with Paglora.** Write in Markdown, design your website on a responsive canvas, and export portable static HTML for any host. No visitor account, subscription, or Paglora backend.
 
 > [!NOTE]
-> The Windows Desktop Studio is in active development and currently runs from source. The separate npm CLI is available as **`paglora@0.0.1-alpha.3`**; it manages local projects but does not build sites.
+> **This is a Paglora-built website, not a separate docs framework.** Its navigation, cards, callouts, site theme, and content are authored in the same Paglora project described here. The official site is still private during development; GitHub Pages has not been deployed.
 
-## Start here
+## Start building
 
-- [Install and run Paglora Desktop](installation.md)
-- [Create your first project](first-project.md)
-- [What's new in the October development sprint](changes.md)
-- [Explore the Studio canvas](studio.md)
-- [Organize pages and navigation](pages.md)
+> [!CARD] Get started
+> [Install Paglora Desktop](installation.md) and [create your first project](first-project.md). The Windows Studio currently runs from source.
 
-## Site features
+> [!CARD] Design your documentation
+> [Explore the visual Studio](studio.md), [choose website layouts and palettes](design.md), and [organize your pages](pages.md).
 
-- [Search, light/dark appearance and reading controls](search.md)
-- [Import local images and logos](images.md)
-- [Configure document language and SEO](language-seo.md)
-- [Build and publish a static website](publishing.md)
+> [!CARD] See what you can publish
+> [Try the native Markdown building blocks](components.md), [search and appearance](search.md), and [static publishing](publishing.md).
 
-## What Paglora offers today
+## A real documentation website, not a screenshot
 
-- **Local editing:** Tiptap for Markdown, a visual canvas, and Monaco for project-owned CSS.
-- **Portable output:** HTML, CSS, bundled fonts, and minified interactive scripts.
-- **Document navigation:** collapsible sidebar groups, table of contents, breadcrumbs and page links.
-- **Offline browser search:** bundled MiniSearch, typo-tolerant matching and CJK substring support.
-- **Site design:** responsive widths, light/dark/system modes, a custom accent, and a document-language setting.
-- **Selective publishing:** only public pages, their referenced local assets, and public metadata are exported.
+This project demonstrates the same features that your own documentation can use:
 
-## Reference and support
+| In the editor | On the published website |
+| --- | --- |
+| Markdown content and page groups | Responsive sidebar and table of contents |
+| Cards, callouts, tables, tasks and code blocks | Rendered, accessible reading components |
+| Website layout and color choices | Coordinated light, dark and system appearance |
+| Public/private page controls | Public-page-only navigation, search and export |
+| Local image imports | Referenced images copied into static assets |
 
-The [CLI guide](cli.md) explains `init`, `inspect`, and `validate`. Use [Troubleshooting](troubleshooting.md) for common export and preview problems.
+## Choose your path
 
-Planned features such as a full drag-and-drop website builder, user-authored TSX/MDX compilation, and one-click deployment are **not yet implemented**.
+- **Writing your first documentation project?** Go to [Your first project](first-project.md).
+- **Customizing a website?** Read [Design site](design.md) and [Pages and navigation](pages.md).
+- **Testing actual rendered features?** Visit [Markdown building blocks](components.md).
+- **Publishing to GitHub Pages?** Start with [Publishing a static website](publishing.md).
+- **Automating project setup?** Use the [npm CLI reference](cli.md).
+- **Following development?** Read [What's new](changes.md).
+
+> [!IMPORTANT]
+> The separately published `paglora@0.0.1-alpha.3` npm package manages projects with `init`, `inspect` and `validate`. It **does not export websites or install Desktop**. Static export is currently performed by the desktop Studio.
+
+Paglora is open source under MIT. Find the [source repository](https://github.com/m1nsook/paglora) and [report an issue](https://github.com/m1nsook/paglora/issues).
