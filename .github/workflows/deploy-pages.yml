@@ -1,10 +1,6 @@
-name: Deploy generated Paglora docs
+name: Legacy manual deploy of tracked site snapshot
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "site/**"
   workflow_dispatch:
 
 permissions:
