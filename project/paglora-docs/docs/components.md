@@ -12,6 +12,11 @@ This page is a **live showcase of Paglora's own renderer**. Everything below is 
 
 Cards can be inserted through the **Card** tool in Studio's block palette or authored in Markdown with a blockquote starting `[!CARD] Title`.
 
+Choose **Design site → Theme → Documentation card layout**: **Stacked** displays full-width cards, while **Responsive grid** groups two or more consecutive `[!CARD]` blocks into responsive columns. The current Docs theme uses **Stacked**.
+
+> [!TIP]
+> The special blockquote marker must not be escaped. Use `[!CARD]` and `[!NOTE]`, not `\\[!CARD\\]` or `\\[!NOTE\\]`, or it becomes ordinary text.
+
 ## Callouts
 
 > [!NOTE]

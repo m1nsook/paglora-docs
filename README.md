@@ -2,6 +2,16 @@
 
 This **public repository** contains the official Paglora documentation source and its independently generated static site. The website is built **with [Paglora](https://github.com/m1nsook/paglora) itself** and is [live on GitHub Pages](https://m1nsook.github.io/paglora-docs/).
 
+## Official repositories
+
+| Repository | Role |
+| --- | --- |
+| [Paglora](https://github.com/m1nsook/paglora) | Main application, npm CLI, releases and issues |
+| [Paglora Docs](https://github.com/m1nsook/paglora-docs) | This project source and the generated GitHub Pages site |
+| [Paglora Languages](https://github.com/m1nsook/paglora-lang) | Community translation packs and contributions |
+
+**Live site:** https://m1nsook.github.io/paglora-docs/
+
 ## Repository layout
 
 - [`project/paglora-docs/`](project/paglora-docs/) — the real Paglora v1 documentation project, including Markdown, page manifest, site settings, and custom CSS.
@@ -29,6 +39,14 @@ bunx --bun paglora@alpha inspect ./project/paglora-docs
 ```
 
 GitHub Actions pins `paglora@0.0.1-alpha.3` for reproducible project validation.
+
+## Why a saved Studio design doesn't automatically update the website
+
+**Design site → Save layout updates only the local Tauri project.** It does not update the GitHub repository or the deployed site.
+
+There are three distinct locations: your **local Studio project**, this repository's editable **`project/paglora-docs/`**, and its generated **`site/`** folder. GitHub Pages publishes **only `site/`**. The theme changes from the October 31 Studio export did appear in generated HTML, but older local project content simultaneously overwrote newer docs source. Install the repository's newest project into Studio **before** editing to avoid losing recently added pages.
+
+Use the [Windows sync helper](scripts/sync-from-studio.ps1) to back up and install the latest project, then collect both the saved Studio project and rebuilt export into this checkout. The helper never pushes to GitHub or deploys for you.
 
 ## Update the live GitHub Pages website
 

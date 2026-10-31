@@ -5,11 +5,13 @@ on:
     paths:
       - "project/**"
       - ".github/workflows/validate-project.yml"
+      - "scripts/**"
   push:
     branches: [main]
     paths:
       - "project/**"
       - ".github/workflows/validate-project.yml"
+      - "scripts/**"
   workflow_dispatch:
 
 permissions:
@@ -26,5 +28,7 @@ jobs:
           node-version: "22"
       - name: Validate official documentation project
         run: npm exec --yes --package=paglora@0.0.1-alpha.3 -- paglora validate ./project/paglora-docs
+      - name: Check documentation source and unescaped components
+        run: node scripts/check-docs-source.mjs
       - name: Inspect documentation pages
         run: npm exec --yes --package=paglora@0.0.1-alpha.3 -- paglora inspect ./project/paglora-docs
