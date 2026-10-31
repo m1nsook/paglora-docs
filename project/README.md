@@ -2,7 +2,7 @@
 
 `project/paglora-docs/` is the **real Paglora v1 project** for the official docs site. Its Markdown pages and `pages.json` drive the user-facing navigation; `site.json` and `theme/custom.css` configure appearance.
 
-The docs are a development draft in a **private repository**. There is no public GitHub Pages deployment yet.
+The docs are a development draft in a **private repository**. There is no public GitHub Pages deployment yet. The site source uses Paglora's **Inset** layout and **Graphite** palette with the existing blue accent as a first-party design demonstration. Opening this project in a current Paglora Desktop source build is required to preview these new settings.
 
 ## Validate with the released CLI
 

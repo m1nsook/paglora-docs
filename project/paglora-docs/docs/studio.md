@@ -22,7 +22,9 @@ The source files remain local and edits are automatically saved. Recent builds i
 
 ## Design site and local images
 
-Use **Design site** to manage header/footer links, content width, appearance, website accent, document language, optional published site URL, and logo images. The local logo import supports PNG, JPEG, WebP, and GIF files up to 5 MiB.
+Use **Design site → Theme** to choose a layout (Classic, Inset, Reading) and a palette (Original, Graphite, Lavender, Linen) independently from your custom accent. Preview changes in Desktop, Tablet, and Mobile widths, then **Save layout**. See [Themes and layouts](themes.md).
+
+The same panel manages header/footer links, content width, appearance, document language, optional published site URL, and logo images. The local logo import supports PNG, JPEG, WebP, and GIF files up to 5 MiB.
 
 Use **Source** to edit your project's `theme/custom.css` using Monaco. TSX/MDX component compilation is **not** supported yet.
 

@@ -14,6 +14,7 @@ Paglora is a **free, open-source, local-first documentation studio**. Write Mark
 - [What's new in the October development sprint](changes.md)
 - [Explore the Studio canvas](studio.md)
 - [Organize pages and navigation](pages.md)
+- [Explore website themes and layouts](themes.md)
 
 ## Site features
 
@@ -28,7 +29,7 @@ Paglora is a **free, open-source, local-first documentation studio**. Write Mark
 - **Portable output:** HTML, CSS, bundled fonts, and minified interactive scripts.
 - **Document navigation:** collapsible sidebar groups, table of contents, breadcrumbs and page links.
 - **Offline browser search:** bundled MiniSearch, typo-tolerant matching and CJK substring support.
-- **Site design:** responsive widths, light/dark/system modes, a custom accent, and a document-language setting.
+- **Site design:** three website layouts (Classic, Inset, Reading), four coordinated light/dark palettes, a separate custom accent, and a document-language setting.
 - **Selective publishing:** only public pages, their referenced local assets, and public metadata are exported.
 
 ## Reference and support

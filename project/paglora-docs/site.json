@@ -28,5 +28,7 @@
   "accentColor": "#5B9EFF",
   "googleFontFamily": "",
   "language": "en",
-  "siteUrl": ""
+  "siteUrl": "",
+  "siteLayout": "inset",
+  "sitePalette": "graphite"
 }

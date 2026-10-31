@@ -8,6 +8,7 @@ Paglora made rapid progress during the October 30–31 development sprint. These
 - Search uses bundled **MiniSearch**, with prefix and typo-tolerant matching plus CJK substring support.
 - Published sites include enhanced headings, code-copy controls, task lists, disclosure blocks, and responsive navigation.
 - The configured website accent is honored in light, dark, and system-dark modes.
+- New **Classic / Inset / Reading** website layouts and **Original / Graphite / Lavender / Linen** coordinated light/dark palettes, selected in Design site.
 
 ## Assets and discovery
 
@@ -20,6 +21,7 @@ Paglora made rapid progress during the October 30–31 development sprint. These
 ## Studio and reliability
 
 - Improvements to tablet preview, stale preview handling, safe page manifests, search keyboard/focus handling, and exported links.
+- **Desktop 0.2.0 development milestone** adds a publishing report with public/private page counts, local image count, and warnings for links pointing to missing or private pages. The npm CLI keeps its independent alpha version.
 - Automated Windows/Ubuntu frontend and Windows Rust checks guard many regressions.
 - Manual Windows Studio and browser smoke tests are still important.
 
