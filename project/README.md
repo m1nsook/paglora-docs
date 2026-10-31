@@ -15,6 +15,22 @@ bunx --bun paglora@0.0.1-alpha.3 inspect ./project/paglora-docs
 
 These commands do not build or publish a website. The [validation workflow](../.github/workflows/validate-project.yml) runs the pinned CLI automatically.
 
+## Synchronize the repo, Studio, and generated export
+
+The project saved in local Paglora Studio is **not** automatically connected to GitHub. Never copy an older Studio project over newer documentation without checking its changes. Use GitHub Desktop to update this repository first.
+
+From the docs repository's root in **Windows PowerShell**:
+
+```powershell
+# Before editing: back up your local Studio project and import current repository source
+powershell -ExecutionPolicy Bypass -File .\\scripts\\sync-from-studio.ps1 -Mode Install
+
+# After editing and choosing Website -> Build static site:
+powershell -ExecutionPolicy Bypass -File .\\scripts\\sync-from-studio.ps1 -Mode Collect -ExportPath "C:\\path\\to\\your\\export"
+```
+
+The second command requires the actual generated export path shown by Paglora Desktop. It backs up and replaces both the repository source `project/paglora-docs/` and the complete `site/` export. Review the changes in GitHub Desktop, commit and **Push origin**. GitHub Actions then deploys `site/`.
+
 ## Open in Studio
 
 The current desktop build discovers projects under its own app data `projects/` folder. Open **Settings → Local project storage** and copy the entire `project/paglora-docs/` directory there, preserving its name and subdirectories. Open **Paglora Docs** from Studio.
@@ -24,7 +40,7 @@ The current desktop build discovers projects under its own app data `projects/` 
 1. Open the latest Paglora Desktop source, select **Website → Build static site** in Studio, and review the publishing report.
 2. Confirm the publishing report, check links, and test the generated HTML/CSS/JavaScript via HTTP(S).
 3. The default `siteUrl` in `site.json` is `https://m1nsook.github.io/paglora-docs/`, including the repository path. If the official domain changes, update the setting in **Design site** before rebuilding.
-4. Place only the generated export files in the top-level **`site/`** directory of this repository, with `site/index.html` at its root; remove an older export before copying.
+4. Update both the edited source project and the static website export. The `Collect` command above performs both copies with backups; for a manual update, replace both `project/paglora-docs/` and `site/`.
 5. Commit and push the generated files with GitHub Desktop. The Pages workflow publishes the `site/` directory, provided **Settings → Pages → Source** is set to **GitHub Actions**.
 
 Never copy the editable `project/` or engineering `reference/` directories into `site/`.

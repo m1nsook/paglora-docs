@@ -28,6 +28,14 @@ A warning does not silently change source content or turn private pages public.
 - Public-page-only image inclusion and search index generation.
 - Document-language options (including Arabic RTL) and optional canonical URLs and sitemap.
 
+## Community translation and design
+
+- Community language packs are developed openly in [paglora-lang](https://github.com/m1nsook/paglora-lang), with English fallback and automated validation.
+- Initial English, Polish and Korean translations cover Studio settings, page management, editor controls and the visual Design site panel.
+- The generated website's navigation, appearance/copy controls and callout headings can use reviewed translation messages.
+- Newly bundled reviewed language packs automatically join the existing document-language options, including RTL direction metadata.
+- Contributors can generate an empty locale catalog and report translation key coverage.
+
 ## Public npm CLI
 
 **`paglora@0.0.1-alpha.3`** is published under the npm `alpha` tag, with `init`, `inspect` and `validate`. It **does not build websites**; export currently requires Desktop Studio.

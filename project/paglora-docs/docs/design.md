@@ -32,6 +32,12 @@ Choose **Light**, **Dark**, or **System** for the default appearance, then adjus
 > [!TIP]
 > If an accent appears to stay blue in dark mode, inspect `theme/custom.css`. A declaration such as `--brand: #72baff;` inside a dark-mode rule overrides the picker. Remove that override to let the site accent work in both modes.
 
+## Card layout and translated design tools
+
+**Stacked** (used by the official docs theme) keeps one card per row. **Responsive grid** arranges neighboring `[!CARD]` components in columns and stacks them on smaller screens.
+
+The Design site interface now uses reviewed English, Polish and Korean [translation packages](https://github.com/m1nsook/paglora-lang) for tabs, presets, fonts, links and preview controls. Studio language does not translate your Markdown.
+
 ## Edit the actual project source
 
 Site settings live in `site.json`. New fields are optional and default to Classic/Original for existing projects:
