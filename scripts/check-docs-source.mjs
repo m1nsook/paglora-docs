@@ -26,4 +26,4 @@ for (const name of catalogNames) {
     issues.push(id+": missing live preview or copyable Markdown snippet");
 }
 if (issues.length) { console.error(issues.join("\n")); process.exitCode = 1; }
-else console.log("Docs source checks passed. Remember to rebuild and commit site/ to update GitHub Pages.");
+else console.log("Docs source checks passed. Headless GitHub Pages deploy builds directly from project/paglora-docs/ on main.");
