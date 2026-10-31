@@ -70,7 +70,7 @@ Open **Source → Theme** and choose **Add CSS** to create a separate stylesheet
 
 The cascade is always:
 
-1. Built-in `styles.css` from Paglora.
+1. Built-in content-hashed `_paglora/chunks/css/<hash>.css` from Paglora (the temporary `styles.css` alias is retained for compatibility).
 2. Your project's `theme/custom.css`.
 3. Additional named files in `theme/styles.json`, from top to bottom.
 
@@ -88,3 +88,9 @@ Stylesheet names are restricted to lowercase letters, digits and hyphens; up to 
 The Studio preview intentionally disables the site's JavaScript. Appearance persistence, search and other browser interactions must be tested on the published output.
 
 Next: [Markdown building blocks](components.md), [Studio canvas](studio.md), and [Publishing](publishing.md).
+
+## Site favicon
+
+Under **Design site → Header → Favicon**, either supply an HTTPS image URL or upload a PNG, JPEG, WebP or GIF. Studio converts uploads to a transparent 64 × 64 PNG inside the local project. The same favicon is used by the generated website and script-disabled Studio preview. Unlike the header logo, a favicon appears in browser tabs and bookmarks.
+
+This favicon setting is optional; older projects continue exporting without one. The official documentation uses its existing Paglora logo image as a favicon until a separate icon is prepared.

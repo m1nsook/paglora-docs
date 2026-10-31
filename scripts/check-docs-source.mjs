@@ -14,7 +14,7 @@ for (const doc of docs) {
   if (/^>\s*\\\[!(?:NOTE|TIP|CARD|STEPS|WARNING|IMPORTANT|CAUTION)\\\]/m.test(body)) issues.push(doc+": escaped Markdown marker (must be [!NOTE], not \\[!NOTE\\])");
   if (/still private during development|GitHub Pages has not been deployed|still private and not publicly hosted/i.test(body)) issues.push(doc+": stale private/deployment claim");
 }
-const catalogNames = ["cards","callouts","steps","tabs","code-groups","code-blocks",
+const catalogNames = ["cards","callouts","badges","steps","tabs","code-groups","code-blocks",
   "disclosures","tables","task-lists","images","typography","lists","links","dividers"];
 for (const name of catalogNames) {
   const id = "component-"+name;
@@ -26,4 +26,4 @@ for (const name of catalogNames) {
     issues.push(id+": missing live preview or copyable Markdown snippet");
 }
 if (issues.length) { console.error(issues.join("\n")); process.exitCode = 1; }
-else console.log("Docs source checks passed. Remember to rebuild and commit site/ to update GitHub Pages.");
+else console.log("Docs source checks passed. Headless GitHub Pages deploy builds directly from project/paglora-docs/ on main.");

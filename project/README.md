@@ -2,7 +2,7 @@
 
 `project/paglora-docs/` is the **real Paglora v1 project** powering the official docs. Its Markdown pages and `pages.json` drive navigation; `site.json` and `theme/custom.css` control the website.
 
-The source repository is **public** and the generated website is [live on GitHub Pages](https://m1nsook.github.io/paglora-docs/). Changes to this source project will not appear on the live site until you rebuild and commit the generated `site/` export.
+The source repository is **public** and the generated website is [live on GitHub Pages](https://m1nsook.github.io/paglora-docs/). Changes to this source project are built and deployed by the headless GitHub Actions workflow when committed to main. Changes saved only inside local Studio still need synchronizing into this repository.
 
 ## Validate with the released CLI
 
@@ -29,7 +29,7 @@ powershell -ExecutionPolicy Bypass -File .\\scripts\\sync-from-studio.ps1 -Mode 
 powershell -ExecutionPolicy Bypass -File .\\scripts\\sync-from-studio.ps1 -Mode Collect -ExportPath "C:\\path\\to\\your\\export"
 ```
 
-The second command requires the actual generated export path shown by Paglora Desktop. It backs up and replaces both the repository source `project/paglora-docs/` and the complete `site/` export. Review the changes in GitHub Desktop, commit and **Push origin**. GitHub Actions then deploys `site/`.
+The second command requires the actual generated export path shown by Paglora Desktop. It backs up and replaces both the repository source `project/paglora-docs/` and the complete `site/` export. Review the changes in GitHub Desktop, commit and **Push origin**. GitHub Actions normally builds and deploys from `project/paglora-docs/`; the tracked `site/` snapshot remains for manual rollback.
 
 ## Open in Studio
 
@@ -47,7 +47,7 @@ Tracked `site/` is a legacy snapshot and is no longer the normal CI deployment s
 2. Confirm the publishing report, check links, and test the generated HTML/CSS/JavaScript via HTTP(S).
 3. The default `siteUrl` in `site.json` is `https://m1nsook.github.io/paglora-docs/`, including the repository path. If the official domain changes, update the setting in **Design site** before rebuilding.
 4. Update both the edited source project and the static website export. The `Collect` command above performs both copies with backups; for a manual update, replace both `project/paglora-docs/` and `site/`.
-5. Commit and push the generated files with GitHub Desktop. The Pages workflow publishes the `site/` directory, provided **Settings → Pages → Source** is set to **GitHub Actions**.
+5. Commit and push the updated `project/paglora-docs/` source with GitHub Desktop. The source-driven Pages workflow rebuilds it using the shared Rust renderer, provided **Settings → Pages → Source** is set to **GitHub Actions**.
 
 Never copy the editable `project/` or engineering `reference/` directories into `site/`.
 

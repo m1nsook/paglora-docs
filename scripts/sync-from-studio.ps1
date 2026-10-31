@@ -24,9 +24,12 @@ function Test-Project([string]$path) {
   if ($manifest.id -ne "paglora-docs") { throw "Wrong project ID, expected paglora-docs." }
 }
 function Test-Export([string]$path) {
-  foreach ($file in @("index.html","styles.css","paglora.js","paglora-search.js","search-index.json")) {
+  foreach ($file in @("index.html","search-index.json")) {
     if (-not (Test-Path -LiteralPath (Join-Path $path $file) -PathType Leaf)) { throw "Missing export file: $file" }
   }
+  if (-not (Test-Path -LiteralPath (Join-Path $path "_paglora\chunks\css") -PathType Container)) { throw "Missing _paglora/chunks/css in export" }
+  if (-not ((Get-ChildItem -LiteralPath (Join-Path $path "_paglora\chunks") -Filter "*.js" -File).Count -ge 2)) { throw "Missing hashed JavaScript chunks" }
+  if (-not ((Get-ChildItem -LiteralPath (Join-Path $path "_paglora\chunks\css") -Filter "*.css" -File).Count -ge 1)) { throw "Missing hashed CSS chunk" }
   foreach ($bad in @("project","docs","reference")) {
     if (Test-Path -LiteralPath (Join-Path $path $bad)) { throw "Export contains raw editable sources: $bad" }
   }

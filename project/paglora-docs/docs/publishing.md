@@ -18,16 +18,31 @@ A generated directory can contain:
 index.html
 studio.html
 publishing.html
-styles.css
-paglora.js
-paglora-search.js
+_paglora/
+  chunks/
+    <content-hash>.js
+    <content-hash>.js
+    css/
+      <content-hash>.css
+pages/
+  index.html          (compact noindex compatibility mirror)
+  publishing.html     (compact noindex compatibility mirror)
+styles.css          (temporary legacy compatibility alias)
+paglora.js          (temporary legacy compatibility alias)
+paglora-search.js   (temporary legacy compatibility alias)
 search-index.json
 sitemap.xml          (only if a published site URL is configured)
 custom.css           (if configured)
-assets/              (if a public page, published CSS or logo uses local images)
+assets/              (if public pages, CSS, logo, or favicon use local images)
 fonts/               (default Geist font and license)
 licenses/            (bundled MiniSearch MIT notice)
 ```
+
+The `/_paglora/chunks/` folder contains content-addressed browser scripts and CSS. The hashes change when the corresponding file changes, allowing long-lived caching without retaining stale scripts. The root aliases are transitional and will be removed in a separate compatibility migration.
+
+**Canonical page URLs still stay at the site root**, preserving existing links such as `component-badges.html`. Paglora also writes compact page copies into `pages/`, with a `noindex` directive and a base URL pointing at the canonical page. Fully moving canonical HTML URLs into `pages/` remains a separate migration requiring updated navigation, canonical URLs, and search results.
+
+You can set a favicon in **Design site → Header → Favicon**: enter an HTTPS image URL or upload PNG/JPEG/WebP/GIF. Studio creates a transparent 64×64 PNG locally; the published site copies local favicon images into `assets/`.
 
 Exact page HTML filenames follow your public page IDs. The exporter includes **only public pages**; private pages are also omitted from site navigation, search and the sitemap.
 

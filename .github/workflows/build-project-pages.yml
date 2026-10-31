@@ -76,6 +76,14 @@ jobs:
           for file in index.html styles.css paglora.js paglora-search.js search-index.json translations.html; do
             test -f "$RUNNER_TEMP/paglora-site/$file" || { echo "::error::Missing $file"; exit 1; }
           done
+          test -d "$RUNNER_TEMP/paglora-site/_paglora/chunks" || { echo "::error::Missing _paglora runtime bundle directory"; exit 1; }
+          js_chunks="$(find "$RUNNER_TEMP/paglora-site/_paglora/chunks" -maxdepth 1 -type f -name '*.js' | wc -l)"
+          css_chunks="$(find "$RUNNER_TEMP/paglora-site/_paglora/chunks/css" -maxdepth 1 -type f -name '*.css' | wc -l)"
+          test "$js_chunks" -ge 2 && test "$css_chunks" -ge 1 || { echo "::error::Missing hashed JS/CSS chunks"; exit 1; }
+          grep -q '_paglora/chunks/' "$RUNNER_TEMP/paglora-site/index.html" || { echo "::error::Export HTML does not reference content chunks"; exit 1; }
+          grep -q 'rel="icon"' "$RUNNER_TEMP/paglora-site/index.html" || { echo "::error::Docs favicon is missing from export"; exit 1; }
+          test -f "$RUNNER_TEMP/paglora-site/pages/index.html" || { echo "::error::Missing compact pages/index.html"; exit 1; }
+          grep -q 'name="robots" content="noindex,follow"' "$RUNNER_TEMP/paglora-site/pages/index.html" || { echo "::error::Page mirror must not compete with canonical root URL"; exit 1; }
           if find "$RUNNER_TEMP/paglora-site" -type f -name '*.md' -print -quit | grep -q .; then
             echo "::error::Raw Markdown source was included in public website"; exit 1;
           fi
