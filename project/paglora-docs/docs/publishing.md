@@ -40,7 +40,7 @@ licenses/            (bundled MiniSearch MIT notice)
 
 The `/_paglora/chunks/` folder contains content-addressed browser scripts and CSS. The hashes change when the corresponding file changes, allowing long-lived caching without retaining stale scripts. The root aliases are transitional and will be removed in a separate compatibility migration.
 
-**Page HTML URLs still stay at the site root** in this publishing milestone, preserving existing links such as `component-badges.html`. Moving the HTML into `pages/` is a separate migration requiring updated navigation, canonical URLs, and search results.
+**Canonical page URLs still stay at the site root**, preserving existing links such as `component-badges.html`. Paglora also writes compact page copies into `pages/`, with a `noindex` directive and a base URL pointing at the canonical page. Fully moving canonical HTML URLs into `pages/` remains a separate migration requiring updated navigation, canonical URLs, and search results.
 
 You can set a favicon in **Design site → Header → Favicon**: enter an HTTPS image URL or upload PNG/JPEG/WebP/GIF. Studio creates a transparent 64×64 PNG locally; the published site copies local favicon images into `assets/`.
 
