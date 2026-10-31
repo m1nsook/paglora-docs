@@ -14,7 +14,7 @@
 > [Explore the visual Studio](studio.md), [choose website layouts and palettes](design.md), and [organize your pages](pages.md).
 
 > [!CARD] See what you can publish
-> [Try the native Markdown building blocks](components.md), [search and appearance](search.md), and [static publishing](publishing.md).
+> [Browse the Components gallery](components.md), [search and appearance](search.md), and [static publishing](publishing.md).
 
 The official website currently uses **Stacked** cards. Switch to **Responsive grid** under Design site to arrange consecutive cards in columns.
 
@@ -26,7 +26,7 @@ This project demonstrates the same features that your documentation can use:
 
 - **Writing your first documentation project?** Go to [Your first project](first-project.md).
 - **Customizing a website?** Read [Design site](design.md) and [Pages and navigation](pages.md).
-- **Testing rendered components?** Visit [Markdown building blocks](components.md).
+- **Testing rendered components?** Visit [Components gallery](components.md).
 - **Publishing to GitHub Pages?** Start with [Publishing a static website](publishing.md).
 - **Automating project setup?** Use the [npm CLI reference](cli.md).
 - **Translating Paglora?** See [Translate Paglora](translations.md) and [paglora-lang](https://github.com/m1nsook/paglora-lang).

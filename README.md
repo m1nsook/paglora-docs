@@ -73,3 +73,7 @@ The workflow checks for an actual Paglora export before publishing and never dep
 ## Collaboration
 
 The primary application [m1nsook/paglora](https://github.com/m1nsook/paglora) remains the authoritative location for code, releases, and issues. For a public but maintainer-managed docs repository, use **Settings → General → Features → Pull requests → Collaborators only** and disable unnecessary repository features. This does not stop people from reading, downloading, or forking public source.
+
+## Component gallery
+
+Explore the [Paglora Components gallery](https://m1nsook.github.io/paglora-docs/components.html): 14 native Markdown blocks and patterns with **live previews** and **copyable code**. The gallery is part of the Paglora documentation source, and the headless workflow deploys it automatically on source pushes. It is not an additional React component dependency.
