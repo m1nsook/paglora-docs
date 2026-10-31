@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="classic" data-site-palette="graphite" data-card-layout="stacked">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,32 +18,35 @@
 <meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
 <title>Markdown building blocks | Paglora Docs</title>
 <link rel="stylesheet" href="styles.css">
-
-<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
-@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap">
+<style>body{font-family:"Inter","Geist Website",system-ui,-apple-system,"Segoe UI",sans-serif}</style>
+<style>:root{--brand:#2196f3;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#2196f3;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#2196f3;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
 <link rel="stylesheet" href="custom.css">
 </head>
 <body class="page-layout-docs">
 <a class="skip-link" href="#content">Skip to content</a>
-<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html"><img class="brand-logo" src="assets/paglora512x512-18e38dba083d91d0-0.png" alt="">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a><a href="https://github.com/m1nsook/paglora-lang" rel="noopener noreferrer">Translation Hub</a></nav></div></header>
 <details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html" aria-current="page">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
 <div class="site-body nav-left layout-docs">
 <nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html" aria-current="page">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
-<main class="site-main" id="content" style="--paglora-content-width:820px">
+<main class="site-main" id="content" style="--paglora-content-width:800px">
 <div class="article-wrap">
 <div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Markdown building blocks</strong></div>
 <details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#documentation-cards">Documentation cards</a><a class="toc-h2" href="#callouts">Callouts</a><a class="toc-h2" href="#code-blocks-with-copy">Code blocks with Copy</a><a class="toc-h2" href="#tables-and-task-lists">Tables and task lists</a><a class="toc-h2" href="#headings-and-navigation">Headings and navigation</a><a class="toc-h2" href="#source-compatibility">Source compatibility</a></details>
 <article class="docs"><h1>Markdown building blocks</h1>
 <p>This page is a <strong>live showcase of Paglora's own renderer</strong>. Everything below is written in ordinary Markdown in the source project; the same blocks render in the Studio preview and the static export.</p>
 <h2 id="documentation-cards">Documentation cards</h2>
-<section class="paglora-card"><div class="paglora-card-title">A documentation card
+<div class="paglora-card-grid"><section class="paglora-card"><div class="paglora-card-title">A documentation card
 Use a card for a clear next action. Try</div>
 
-</section>
-<section class="paglora-card"><div class="paglora-card-title">A second route
+</section><section class="paglora-card"><div class="paglora-card-title">A second route
 Explore</div>
 
-</section>
+</section></div>
+
 <p>Cards can be inserted through the <strong>Card</strong> tool in Studio's block palette or authored in Markdown with a blockquote starting <code>[!CARD] Title</code>.</p>
 <h2 id="callouts">Callouts</h2>
 <aside class="paglora-callout paglora-callout-note" role="note"><div class="paglora-callout-title">Note</div>
@@ -112,7 +115,8 @@ bun run desktop
 </div></main>
 <aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#documentation-cards">Documentation cards</a><a class="toc-h2" href="#callouts">Callouts</a><a class="toc-h2" href="#code-blocks-with-copy">Code blocks with Copy</a><a class="toc-h2" href="#tables-and-task-lists">Tables and task lists</a><a class="toc-h2" href="#headings-and-navigation">Headings and navigation</a><a class="toc-h2" href="#source-compatibility">Source compatibility</a></div></aside>
 </div>
-<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a><a href="https://github.com/m1nsook/paglora-lang" rel="noopener noreferrer">Translate with Paglora</a><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">Paglora</a></nav></div></footer>
+<script type="application/json" id="paglora-i18n">{"site.appearance.change":"Appearance: {mode}. Change theme","site.appearance.dark":"Dark","site.appearance.light":"Light","site.appearance.system":"System","site.copy.copied":"Copied","site.copy.copiedLabel":"Code copied to clipboard","site.copy.copy":"Copy","site.copy.copyLabel":"Copy code block","site.copy.copying":"Copying…","site.copy.copyingLabel":"Copying code to clipboard","site.copy.unavailable":"Unavailable","site.copy.unavailableLabel":"Clipboard unavailable","site.heading.linkTo":"Link to {heading}","site.heading.section":"section","site.navigation.browse":"Browse documentation","site.navigation.next":"Next","site.navigation.onThisPage":"On this page","site.navigation.previous":"Previous","site.navigation.skip":"Skip to content"}</script>
 <script defer src="paglora.js"></script>
 <script defer src="paglora-search.js"></script>
 
