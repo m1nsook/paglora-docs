@@ -1,0 +1,15 @@
+/* The official docs are built with Paglora's renderer.
+   Layout/palette/accent are controlled by site.json, not hard-coded here.
+   In particular, do not overwrite --brand in dark mode: the accent picker
+   must work consistently in light, explicit dark and system-dark modes. */
+.site-header { box-shadow: 0 1px 0 rgba(0,0,0,.025); }
+.site-nav a { border-radius: 9px; }
+.site-nav .nav-group>summary { letter-spacing: .075em; }
+.docs h1 { letter-spacing: -.045em; }
+.docs a { text-underline-offset: 3px; }
+.docs pre { border: 1px solid var(--line); }
+.docs .paglora-card { transition: border-color .18s ease; }
+.docs .paglora-card:hover { border-color: var(--brand); }
+@media(prefers-reduced-motion:reduce) {
+  .docs .paglora-card { transition: none; }
+}

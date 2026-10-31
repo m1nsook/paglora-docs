@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Installation and setup Paglora Desktop is currently a Tauri 2 early-development application with no stable Windows installer release. Run the Studio from the of">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/installation.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/installation.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Installation and setup | Paglora Docs">
+<meta property="og:description" content="Installation and setup Paglora Desktop is currently a Tauri 2 early-development application with no stable Windows installer release. Run the Studio from the of">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Installation and setup | Paglora Docs">
+<meta name="twitter:description" content="Installation and setup Paglora Desktop is currently a Tauri 2 early-development application with no stable Windows installer release. Run the Studio from the of">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Installation and setup | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html" aria-current="page">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html" aria-current="page">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Installation and setup</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#windows-prerequisites">Windows prerequisites</a><a class="toc-h2" href="#launch-the-studio">Launch the Studio</a><a class="toc-h2" href="#public-npm-cli">Public npm CLI</a></details>
+<article class="docs"><h1>Installation and setup</h1>
+<p>Paglora Desktop is currently a <strong>Tauri 2 early-development application</strong> with no stable Windows installer release. Run the Studio from the <a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">official source repository</a>.</p>
+<h2 id="windows-prerequisites">Windows prerequisites</h2>
+<ul>
+<li>Windows 11 with WebView2 and the Tauri 2 Windows C++ build prerequisites.</li>
+<li><a href="https://bun.sh/" rel="noopener noreferrer">Bun</a> for the workspace and development commands.</li>
+<li><a href="https://rustup.rs/" rel="noopener noreferrer">Rust</a> and the appropriate Windows toolchain.</li>
+<li>Node.js 20 or newer for running standalone Node test commands.</li>
+</ul>
+<p>See the <a href="https://v2.tauri.app/start/prerequisites/" rel="noopener noreferrer">official Tauri prerequisites</a> for the current setup.</p>
+<h2 id="launch-the-studio">Launch the Studio</h2>
+<p>Open the Paglora repository in GitHub Desktop, update to the current <code>main</code>, and run from its <strong>repository root</strong>:</p>
+<pre><code>bun install
+bun run desktop
+</code></pre>
+<p>The frontend-only <code>bun run dev</code> mode cannot access local project folders through Tauri.</p>
+<p>You can find the Studio project directory under <strong>Settings → Local project storage</strong>. Projects are stored locally, without an account.</p>
+<h2 id="public-npm-cli">Public npm CLI</h2>
+<p>The <strong><code>paglora@0.0.1-alpha.3</code></strong> CLI is independently available:</p>
+<pre><code>bunx --bun paglora@alpha --help
+bunx --bun paglora@alpha --version
+</code></pre>
+<p>It can create, inspect and validate project folders. It <strong>cannot</strong> run the Desktop application or export websites.</p>
+<aside class="paglora-callout paglora-callout-tip" role="note"><div class="paglora-callout-title">Tip</div>
+<p>If Windows PowerShell blocks <code>npm.ps1</code>, invoke <strong><code>npm.cmd</code></strong> instead (for example, <code>npm.cmd view paglora@alpha version</code>). You do not need to change the execution policy.</p>
+</aside>
+<p>Next: <a href="first-project.html">Create your first project</a> or <a href="cli.html">CLI reference</a>.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="index.html"><small>← Previous</small><span>Welcome</span></a><a class="next" href="first-project.html"><small>Next →</small><span>Your first project</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#windows-prerequisites">Windows prerequisites</a><a class="toc-h2" href="#launch-the-studio">Launch the Studio</a><a class="toc-h2" href="#public-npm-cli">Public npm CLI</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>

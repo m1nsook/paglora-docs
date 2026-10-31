@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Paglora CLI The public npm package paglora@0.0.1-alpha.3 is published under the alpha tag. It creates, inspects, and validates local documentation projects. Thi">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/cli.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/cli.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Command-line interface | Paglora Docs">
+<meta property="og:description" content="Paglora CLI The public npm package paglora@0.0.1-alpha.3 is published under the alpha tag. It creates, inspects, and validates local documentation projects. Thi">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Command-line interface | Paglora Docs">
+<meta name="twitter:description" content="Paglora CLI The public npm package paglora@0.0.1-alpha.3 is published under the alpha tag. It creates, inspects, and validates local documentation projects. Thi">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Command-line interface | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html" aria-current="page">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html" aria-current="page">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Command-line interface</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#install-or-run-without-installing">Install or run without installing</a><a class="toc-h2" href="#create-a-project">Create a project</a><a class="toc-h2" href="#inspect-and-validate">Inspect and validate</a><a class="toc-h2" href="#windows-npm-powershell-workaround">Windows npm PowerShell workaround</a><a class="toc-h2" href="#what-the-cli-cannot-do-yet">What the CLI cannot do yet</a></details>
+<article class="docs"><h1>Paglora CLI</h1>
+<p>The public npm package <strong><code>paglora@0.0.1-alpha.3</code></strong> is published under the <strong><code>alpha</code></strong> tag. It creates, inspects, and validates local documentation projects. This is <strong>not</strong> a Desktop installer or website builder.</p>
+<h2 id="install-or-run-without-installing">Install or run without installing</h2>
+<pre><code>bun add --global paglora@alpha
+paglora --version
+</code></pre>
+<p>Or run the published alpha directly:</p>
+<pre><code>bunx --bun paglora@alpha --help
+</code></pre>
+<p>The npm <code>latest</code> tag is separate from the prerelease channel, so use <code>@alpha</code> to get alpha.3.</p>
+<h2 id="create-a-project">Create a project</h2>
+<pre><code>bunx --bun paglora@alpha init ./my-docs --name "My Docs"
+</code></pre>
+<p>The target directory must <strong>not exist</strong>. It creates <code>paglora.json</code>, <code>pages.json</code>, <code>docs/index.md</code>, and <code>theme/custom.css</code> and will not overwrite an existing folder.</p>
+<h2 id="inspect-and-validate">Inspect and validate</h2>
+<pre><code>bunx --bun paglora@alpha inspect ./my-docs --json
+bunx --bun paglora@alpha validate ./my-docs
+</code></pre>
+<p>Inspection reports pages, layouts, visibility and navigation groups. Validation checks the canonical v1 project format, required files and other rules without rewriting content. Alpha.3 includes stricter argument handling, Unicode label validation, and enforcement that the Overview page stays public.</p>
+<h2 id="windows-npm-powershell-workaround">Windows npm PowerShell workaround</h2>
+<p>On some Windows machines, PowerShell blocks <code>npm.ps1</code> with an execution-policy error. Use the Windows command wrapper without lowering security settings:</p>
+<pre><code>npm.cmd view paglora@alpha version
+npm.cmd dist-tag ls paglora
+</code></pre>
+<h2 id="what-the-cli-cannot-do-yet">What the CLI cannot do yet</h2>
+<p>The CLI cannot render or deploy a static site. Use <strong>Website → Build static site</strong> in Paglora Desktop. CLI-created projects outside the Studio's configured data folder do not appear on its dashboard automatically; see <strong>Settings → Local project storage</strong>.</p>
+<p>The old prototype's Pageo manifest is unsupported. Never publish npm <code>0.0.1-alpha.3</code> again; future releases must have a new version.</p>
+<p>Next: <a href="installation.html">Installation</a> or <a href="publishing.html">Publishing</a>.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="publishing.html"><small>← Previous</small><span>Publishing a website</span></a><a class="next" href="troubleshooting.html"><small>Next →</small><span>Troubleshooting</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#install-or-run-without-installing">Install or run without installing</a><a class="toc-h2" href="#create-a-project">Create a project</a><a class="toc-h2" href="#inspect-and-validate">Inspect and validate</a><a class="toc-h2" href="#windows-npm-powershell-workaround">Windows npm PowerShell workaround</a><a class="toc-h2" href="#what-the-cli-cannot-do-yet">What the CLI cannot do yet</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>

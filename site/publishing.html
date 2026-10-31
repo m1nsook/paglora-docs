@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Publishing a static website Paglora produces portable HTML, CSS, fonts, local images, and minified browser JavaScript. Visitors do not need a Paglora account or">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/publishing.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/publishing.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Publishing a website | Paglora Docs">
+<meta property="og:description" content="Publishing a static website Paglora produces portable HTML, CSS, fonts, local images, and minified browser JavaScript. Visitors do not need a Paglora account or">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Publishing a website | Paglora Docs">
+<meta name="twitter:description" content="Publishing a static website Paglora produces portable HTML, CSS, fonts, local images, and minified browser JavaScript. Visitors do not need a Paglora account or">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Publishing a website | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html" aria-current="page">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html" aria-current="page">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Publishing a website</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#build-from-studio">Build from Studio</a><a class="toc-h2" href="#host-the-generated-files">Host the generated files</a><a class="toc-h2" href="#github-pages-project-sites">GitHub Pages project sites</a><a class="toc-h2" href="#test-the-real-website">Test the real website</a></details>
+<article class="docs"><h1>Publishing a static website</h1>
+<p>Paglora produces portable HTML, CSS, fonts, local images, and minified browser JavaScript. Visitors do not need a Paglora account or server.</p>
+<h2 id="build-from-studio">Build from Studio</h2>
+<ol>
+<li><p>Save your documentation.</p>
+</li>
+<li><p>In <strong>Pages</strong>, confirm which pages are <strong>Public</strong>.</p>
+</li>
+<li><p>Open <strong>Design site</strong> to set navigation, appearance, accent, language, and optionally a published HTTPS site URL.</p>
+</li>
+<li><p>Review the layout in <strong>Preview site</strong>.</p>
+</li>
+<li><p>Choose <strong>Website → Build static site</strong>.</p>
+</li>
+</ol>
+<p>A generated directory can contain:</p>
+<pre><code>index.html
+studio.html
+publishing.html
+styles.css
+paglora.js
+paglora-search.js
+search-index.json
+sitemap.xml          (only if a published site URL is configured)
+custom.css           (if configured)
+assets/              (if a public page or logo uses local images)
+fonts/               (default Geist font and license)
+licenses/            (bundled MiniSearch MIT notice)
+</code></pre>
+<p>Exact page HTML filenames follow your public page IDs. The exporter includes <strong>only public pages</strong>; private pages are also omitted from site navigation, search and the sitemap.</p>
+<h2 id="host-the-generated-files">Host the generated files</h2>
+<p>Upload the <strong>contents of the generated export folder</strong>, not the original project source. Keep the scripts, JSON, fonts, licenses, and any generated <code>assets/</code> together with the pages.</p>
+<p>GitHub Pages and other ordinary static hosts work. Serve through <strong>HTTP(S)</strong>: browser restrictions on <code>file://</code> can block loading <code>search-index.json</code>.</p>
+<aside class="paglora-callout paglora-callout-important" role="note"><div class="paglora-callout-title">Important</div>
+<p>A private page's Markdown may still exist in your <strong>local project</strong>. Never publish the entire project or the engineering <code>reference/</code> directory.</p>
+</aside>
+<h2 id="github-pages-project-sites">GitHub Pages project sites</h2>
+<p>If your Pages URL is <code>https://yourname.github.io/repository/</code>, include <strong><code>/repository/</code></strong> when configuring <strong>Published site URL</strong>. Paglora uses this root for canonical links and the optional <code>sitemap.xml</code>. Rebuild after changing the URL.</p>
+<p>Publishing remains a separate step; Paglora does not automatically commit or deploy your output to GitHub Pages.</p>
+<h2 id="test-the-real-website">Test the real website</h2>
+<p>Studio's canvas disables runtime scripts. Before announcing a deployment, verify the hosted website's Search button and Ctrl+K, appearance switching, code-copy controls, images, mobile navigation, and internal links. Check that private pages do not appear in the generated output.</p>
+<p>See <a href="images.html">Local images</a>, <a href="language-seo.html">Language and SEO</a>, and <a href="troubleshooting.html">Troubleshooting</a>.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="language-seo.html"><small>← Previous</small><span>Language and SEO</span></a><a class="next" href="cli.html"><small>Next →</small><span>Command-line interface</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#build-from-studio">Build from Studio</a><a class="toc-h2" href="#host-the-generated-files">Host the generated files</a><a class="toc-h2" href="#github-pages-project-sites">GitHub Pages project sites</a><a class="toc-h2" href="#test-the-real-website">Test the real website</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>

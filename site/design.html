@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Design site: layouts, palettes and CSS Paglora&#39;s Design site panel changes the real documentation renderer used for both the Studio preview and the exported HTM">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/design.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/design.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Design site | Paglora Docs">
+<meta property="og:description" content="Design site: layouts, palettes and CSS Paglora&#39;s Design site panel changes the real documentation renderer used for both the Studio preview and the exported HTM">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Design site | Paglora Docs">
+<meta name="twitter:description" content="Design site: layouts, palettes and CSS Paglora&#39;s Design site panel changes the real documentation renderer used for both the Studio preview and the exported HTM">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Design site | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html" aria-current="page">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html" aria-current="page">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Design site</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#choose-your-site-layout">Choose your site layout</a><a class="toc-h2" href="#coordinated-light-and-dark-palettes">Coordinated light and dark palettes</a><a class="toc-h2" href="#edit-the-actual-project-source">Edit the actual project source</a><a class="toc-h2" href="#preview-and-verify">Preview and verify</a></details>
+<article class="docs"><h1>Design site: layouts, palettes and CSS</h1>
+<p>Paglora's <strong>Design site</strong> panel changes the real documentation renderer used for both the Studio preview and the exported HTML. It is not a screenshot-only mockup.</p>
+<h2 id="choose-your-site-layout">Choose your site layout</h2>
+<p>Open a project in Desktop Studio, select <strong>Design site</strong>, and find the website layout choices:</p>
+<table>
+<thead>
+<tr>
+<th>Layout</th>
+<th>Description</th>
+<th>When to use it</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Classic</strong></td>
+<td>Familiar edge-to-edge documentation</td>
+<td>Existing projects and traditional navigation</td>
+</tr>
+<tr>
+<td><strong>Inset</strong></td>
+<td>Floating header and framed content</td>
+<td>A modern docs website with more separation</td>
+</tr>
+<tr>
+<td><strong>Reading</strong></td>
+<td>Quieter chrome and spacious typography</td>
+<td>Long-form guides and tutorials</td>
+</tr>
+</tbody></table>
+<p>Changes appear in the Studio preview. Select <strong>Save layout</strong> to persist them to <code>site.json</code>.</p>
+<aside class="paglora-callout paglora-callout-note" role="note"><div class="paglora-callout-title">Note</div>
+<p>Website layout is different from <strong>per-page layout</strong>. In <strong>Pages</strong>, each page can still choose <strong>Docs</strong>, <strong>Wide</strong>, or <strong>Landing</strong>. The website layout controls the surrounding site shell.</p>
+</aside>
+<h2 id="coordinated-light-and-dark-palettes">Coordinated light and dark palettes</h2>
+<p>The palette presets are <strong>Original</strong>, <strong>Graphite</strong>, <strong>Lavender</strong>, and <strong>Linen</strong>. Each adjusts surfaces, text, borders and code blocks together for a cohesive site.</p>
+<p>Choose <strong>Light</strong>, <strong>Dark</strong>, or <strong>System</strong> for the default appearance, then adjust <strong>Website accent color</strong> independently. Your accent applies to links and active navigation in light and dark modes, including system-dark mode.</p>
+<aside class="paglora-callout paglora-callout-tip" role="note"><div class="paglora-callout-title">Tip</div>
+<p>If an accent appears to stay blue in dark mode, inspect <code>theme/custom.css</code>. A declaration such as <code>--brand: #72baff;</code> inside a dark-mode rule overrides the picker. Remove that override to let the site accent work in both modes.</p>
+</aside>
+<h2 id="edit-the-actual-project-source">Edit the actual project source</h2>
+<p>Site settings live in <code>site.json</code>. New fields are optional and default to Classic/Original for existing projects:</p>
+<pre><code>{
+  "siteLayout": "inset",
+  "sitePalette": "graphite",
+  "themeMode": "system",
+  "accentColor": "#5B9EFF"
+}
+</code></pre>
+<p>The snippet shows the relevant fields only, <strong>not</strong> a complete replacement for your existing <code>site.json</code>.</p>
+<p>To apply extra polish, open <strong>Source</strong> and edit your project's <code>theme/custom.css</code>:</p>
+<pre><code>/* Keep the accent and palette driven by Design site. */
+.docs h1 { letter-spacing: -0.045em; }
+.docs a { text-underline-offset: 3px; }
+.docs pre { border: 1px solid var(--line); }
+</code></pre>
+<p>Use palette variables such as <code>var(--bg)</code>, <code>var(--fg)</code>, <code>var(--line)</code> and <code>var(--brand)</code> rather than hard-coding one mode's color. Custom CSS is project-owned and exported with your site.</p>
+<h2 id="preview-and-verify">Preview and verify</h2>
+<ol>
+<li><p>Check <strong>Desktop</strong>, <strong>Tablet</strong>, and <strong>Phone</strong> widths.</p>
+</li>
+<li><p>Compare Light and Dark; switch System while testing your OS preference.</p>
+</li>
+<li><p><strong>Save layout</strong>, then choose <strong>Website → Build static site</strong>.</p>
+</li>
+<li><p>Open the exported website through HTTP(S) and test its appearance switcher.</p>
+</li>
+</ol>
+<p>The Studio preview intentionally disables the site's JavaScript. Appearance persistence, search and other browser interactions must be tested on the published output.</p>
+<p>Next: <a href="components.html">Markdown building blocks</a>, <a href="studio.html">Studio canvas</a>, and <a href="publishing.html">Publishing</a>.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="studio.html"><small>← Previous</small><span>Studio canvas</span></a><a class="next" href="pages.html"><small>Next →</small><span>Pages and navigation</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#choose-your-site-layout">Choose your site layout</a><a class="toc-h2" href="#coordinated-light-and-dark-palettes">Coordinated light and dark palettes</a><a class="toc-h2" href="#edit-the-actual-project-source">Edit the actual project source</a><a class="toc-h2" href="#preview-and-verify">Preview and verify</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>

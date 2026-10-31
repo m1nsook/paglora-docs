@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Troubleshooting My page does not appear after publishing Check that it is Public, then rebuild and redeploy the export. Overview stays public. Private pages are">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/troubleshooting.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/troubleshooting.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Troubleshooting | Paglora Docs">
+<meta property="og:description" content="Troubleshooting My page does not appear after publishing Check that it is Public, then rebuild and redeploy the export. Overview stays public. Private pages are">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Troubleshooting | Paglora Docs">
+<meta name="twitter:description" content="Troubleshooting My page does not appear after publishing Check that it is Public, then rebuild and redeploy the export. Overview stays public. Private pages are">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Troubleshooting | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Troubleshooting</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#my-page-does-not-appear-after-publishing">My page does not appear after publishing</a><a class="toc-h2" href="#my-cli-project-does-not-appear-in-studio">My CLI project does not appear in Studio</a><a class="toc-h2" href="#i-changed-the-accent-but-dark-mode-still-looks-blue">I changed the accent but dark mode still looks blue</a><a class="toc-h2" href="#search-is-missing-or-shows-no-results">Search is missing or shows no results</a><a class="toc-h2" href="#search-and-appearance-do-not-work-inside-studio">Search and appearance do not work inside Studio</a><a class="toc-h2" href="#a-local-image-or-logo-is-missing">A local image or logo is missing</a><a class="toc-h2" href="#my-sitemap-is-missing-or-contains-the-wrong-url">My sitemap is missing or contains the wrong URL</a><a class="toc-h2" href="#the-exported-website-does-not-match-the-preview">The exported website does not match the preview</a><a class="toc-h2" href="#npm-commands-fail-in-windows-powershell">npm commands fail in Windows PowerShell</a><a class="toc-h2" href="#text-editing-on-the-canvas-is-limited">Text editing on the canvas is limited</a><a class="toc-h2" href="#report-an-issue">Report an issue</a></details>
+<article class="docs"><h1>Troubleshooting</h1>
+<h2 id="my-page-does-not-appear-after-publishing">My page does not appear after publishing</h2>
+<p>Check that it is <strong>Public</strong>, then rebuild and redeploy the export. Overview stays public. Private pages are excluded from HTML, navigation, <code>search-index.json</code> and the sitemap.</p>
+<h2 id="my-cli-project-does-not-appear-in-studio">My CLI project does not appear in Studio</h2>
+<p>The CLI can create a project in any new folder. Studio currently discovers local projects only under its configured application data <code>projects/</code> directory, displayed at <strong>Settings → Local project storage</strong>. Importing external project folders is not automatic yet.</p>
+<h2 id="i-changed-the-accent-but-dark-mode-still-looks-blue">I changed the accent but dark mode still looks blue</h2>
+<p>Update to a current Paglora source build. An earlier exported-site stylesheet overrode user accents with blue in dark and system-dark mode. The newer renderer applies the selected <strong>Design site → Website accent color</strong> to light, dark and system appearances.</p>
+<p>Save the site design, rebuild, and redeploy. If a custom <code>theme/custom.css</code> overrides <code>--brand</code>, check that CSS as well. Updating the app alone will not alter an already hosted export.</p>
+<h2 id="search-is-missing-or-shows-no-results">Search is missing or shows no results</h2>
+<p>Make sure you uploaded <code>paglora-search.js</code> and <code>search-index.json</code> alongside the HTML. Only <strong>public</strong> pages are indexed. Search needs an HTTP(S) origin; opening the HTML via <code>file://</code> can block requests for its JSON index.</p>
+<p>The search dialog offers a retry when loading fails. Korean, Japanese and Chinese queries have substring matching support; other languages use bundled MiniSearch with prefix and typo-tolerant matching.</p>
+<h2 id="search-and-appearance-do-not-work-inside-studio">Search and appearance do not work inside Studio</h2>
+<p>The inline canvas intentionally disables generated-site JavaScript. To test interactive features, <strong>build the site</strong> and serve the exported output over HTTP(S). The visible canvas layout is not a substitute for browser interaction testing.</p>
+<h2 id="a-local-image-or-logo-is-missing">A local image or logo is missing</h2>
+<p>Local imports accept <strong>PNG, JPEG, WebP, and GIF</strong> up to <strong>5 MiB</strong>. Check the <code>assets/...</code> filename, whether the page is public, and whether the latest generated <code>assets/</code> directory was uploaded. Unused or private-only images are intentionally omitted.</p>
+<h2 id="my-sitemap-is-missing-or-contains-the-wrong-url">My sitemap is missing or contains the wrong URL</h2>
+<p>Set <strong>Published site URL</strong> to the full HTTPS root <strong>ending in a slash</strong>. For GitHub Pages project hosting, include the repository segment (for example, <code>https://example.github.io/docs/</code>). Rebuild after changing the URL. Without a configured root, Paglora intentionally skips <code>sitemap.xml</code>.</p>
+<h2 id="the-exported-website-does-not-match-the-preview">The exported website does not match the preview</h2>
+<p>Upload the entire latest export: page HTML files, <code>styles.css</code>, optional <code>custom.css</code>, scripts, JSON index, generated images, fonts and licenses. External Google Fonts or HTTPS images need network access. Test on the real deployed URL.</p>
+<h2 id="npm-commands-fail-in-windows-powershell">npm commands fail in Windows PowerShell</h2>
+<p>If you see a message about <code>npm.ps1</code> being blocked by execution policy, use <strong><code>npm.cmd</code></strong> instead of <code>npm</code>. You do not need to disable PowerShell security.</p>
+<h2 id="text-editing-on-the-canvas-is-limited">Text editing on the canvas is limited</h2>
+<p>Use <strong>Edit</strong> for links, lists and rich or nested Markdown. Canvas inline editing intentionally handles only supported simple blocks so it does not corrupt formatted source.</p>
+<h2 id="report-an-issue">Report an issue</h2>
+<p>Use the <a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Paglora issue tracker</a>. Include your build/version, OS, reproduction steps and relevant logs. Back up development projects before trying new builds.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="cli.html"><small>← Previous</small><span>Command-line interface</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#my-page-does-not-appear-after-publishing">My page does not appear after publishing</a><a class="toc-h2" href="#my-cli-project-does-not-appear-in-studio">My CLI project does not appear in Studio</a><a class="toc-h2" href="#i-changed-the-accent-but-dark-mode-still-looks-blue">I changed the accent but dark mode still looks blue</a><a class="toc-h2" href="#search-is-missing-or-shows-no-results">Search is missing or shows no results</a><a class="toc-h2" href="#search-and-appearance-do-not-work-inside-studio">Search and appearance do not work inside Studio</a><a class="toc-h2" href="#a-local-image-or-logo-is-missing">A local image or logo is missing</a><a class="toc-h2" href="#my-sitemap-is-missing-or-contains-the-wrong-url">My sitemap is missing or contains the wrong URL</a><a class="toc-h2" href="#the-exported-website-does-not-match-the-preview">The exported website does not match the preview</a><a class="toc-h2" href="#npm-commands-fail-in-windows-powershell">npm commands fail in Windows PowerShell</a><a class="toc-h2" href="#text-editing-on-the-canvas-is-limited">Text editing on the canvas is limited</a><a class="toc-h2" href="#report-an-issue">Report an issue</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>

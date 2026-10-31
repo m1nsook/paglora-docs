@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-color-mode="system" data-site-layout="inset" data-site-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Search and appearance Paglora exports readable static HTML plus two small, minified JavaScript files for client-side enhancements. No hosted search service or v">
+<link rel="canonical" href="https://m1nsook.github.io/paglora-docs/search.html">
+<meta property="og:url" content="https://m1nsook.github.io/paglora-docs/search.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Search and appearance | Paglora Docs">
+<meta property="og:description" content="Search and appearance Paglora exports readable static HTML plus two small, minified JavaScript files for client-side enhancements. No hosted search service or v">
+<meta property="og:site_name" content="Paglora Docs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Search and appearance | Paglora Docs">
+<meta name="twitter:description" content="Search and appearance Paglora exports readable static HTML plus two small, minified JavaScript files for client-side enhancements. No hosted search service or v">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101114" media="(prefers-color-scheme: dark)">
+<title>Search and appearance | Paglora Docs</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>:root{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}:root[data-color-mode="dark"]{--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-color-mode="light"]){--brand:#5B9EFF;--brand-light:color-mix(in srgb,var(--brand) 13%,var(--bg))}}</style>
+<link rel="stylesheet" href="custom.css">
+</head>
+<body class="page-layout-docs">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header  "><div class="top-bar"><a class="brand brand-wrap" href="index.html">Paglora Docs</a><nav class="header-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora" rel="noopener noreferrer">GitHub</a><a href="https://www.npmjs.com/package/paglora" rel="noopener noreferrer">npm</a></nav></div></header>
+<details class="mobile-nav"><summary>Browse documentation</summary><nav class="mobile-nav-inner" aria-label="Mobile page navigation"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html" aria-current="page">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></nav></details>
+<div class="site-body nav-left layout-docs">
+<nav class="site-nav" aria-label="Documentation navigation"><div class="site-nav-inner"><details class="nav-group" open><summary>Getting Started</summary><div class="nav-group-links"><a href="index.html">Welcome</a><a href="installation.html">Installation and setup</a><a href="first-project.html">Your first project</a><a href="changes.html">What&#39;s new</a></div></details><details class="nav-group" open><summary>Studio</summary><div class="nav-group-links"><a href="studio.html">Studio canvas</a><a href="design.html">Design site</a><a href="pages.html">Pages and navigation</a></div></details><details class="nav-group" open><summary>Features</summary><div class="nav-group-links"><a href="components.html">Markdown building blocks</a><a href="search.html" aria-current="page">Search and appearance</a><a href="images.html">Local images</a><a href="language-seo.html">Language and SEO</a></div></details><details class="nav-group" open><summary>Publishing</summary><div class="nav-group-links"><a href="publishing.html">Publishing a website</a></div></details><details class="nav-group" open><summary>Reference</summary><div class="nav-group-links"><a href="cli.html">Command-line interface</a><a href="troubleshooting.html">Troubleshooting</a></div></details></div></nav>
+<main class="site-main" id="content" style="--paglora-content-width:820px">
+<div class="article-wrap">
+<div class="page-heading"><a href="index.html">Docs</a><span class="crumb-separator">/</span><strong>Search and appearance</strong></div>
+<details class="mobile-toc"><summary>On this page</summary><a class="toc-h2" href="#offline-search-with-minisearch">Offline search with MiniSearch</a><a class="toc-h2" href="#appearance-and-accent">Appearance and accent</a><a class="toc-h2" href="#page-reading-improvements">Page reading improvements</a><a class="toc-h2" href="#preview-versus-published-website">Preview versus published website</a></details>
+<article class="docs"><h1>Search and appearance</h1>
+<p>Paglora exports readable static HTML plus two small, minified JavaScript files for client-side enhancements. No hosted search service or visitor account is required.</p>
+<h2 id="offline-search-with-minisearch">Offline search with MiniSearch</h2>
+<p>On a published site, select <strong>Search</strong> or press <strong>Ctrl+K</strong> (on macOS, <strong>Cmd+K</strong>). Enter a title, phrase, or word from a public page. Search supports prefix matches, typo-tolerant fallback, and substring matching for Korean, Japanese, and Chinese text.</p>
+<p>Use <strong>Up/Down</strong> to navigate results, <strong>Home/End</strong> to jump between results, <strong>Enter</strong> to open a page, and <strong>Escape</strong> to close. Keyboard selection and loading/error messages are announced accessibly. The dialog can retry if loading fails.</p>
+<p>The static export contains <code>search-index.json</code> with <strong>only public pages</strong>. The <code>paglora-search.js</code> browser bundle includes MiniSearch; no external CDN is needed. Search runs in the visitor's browser. The package's MIT notice is included in the exported <code>licenses/</code> folder.</p>
+<aside class="paglora-callout paglora-callout-important" role="note"><div class="paglora-callout-title">Important</div>
+<p>A page marked private is excluded from navigation, search, the sitemap, and published HTML. This does not make project files safe to upload: only deploy the <strong>generated export</strong>, not the editable project directory.</p>
+</aside>
+<h2 id="appearance-and-accent">Appearance and accent</h2>
+<p>The published header's <strong>Appearance</strong> control cycles through <strong>Light</strong>, <strong>Dark</strong>, and <strong>System</strong>. The preference is remembered where browser storage permits and can synchronize between open tabs on the same site.</p>
+<p>Choose your site's default appearance and <strong>Website accent color</strong> in <strong>Design site</strong>. The custom accent applies to both light and dark palettes, including system-dark mode, in current source builds. Project-owned <code>theme/custom.css</code> can override the built-in styles.</p>
+<p>The published site's appearance is independent of the desktop app's appearance.</p>
+<h2 id="page-reading-improvements">Page reading improvements</h2>
+<ul>
+<li>The <strong>On this page</strong> outline tracks nearby headings in desktop and mobile views.</li>
+<li>H2, H3 and H4 headings offer shareable <code>#</code> permalinks, including Unicode headings.</li>
+<li>Code blocks have <strong>Copy</strong> controls with accessible progress and success/failure feedback.</li>
+<li>Markdown task lists and collapsible disclosure blocks render without an additional website framework.</li>
+<li>Callouts support <code>NOTE</code>, <code>TIP</code>, <code>IMPORTANT</code>, <code>WARNING</code>, and <code>CAUTION</code>.</li>
+</ul>
+<h2 id="preview-versus-published-website">Preview versus published website</h2>
+<p>Studio's inline canvas deliberately disables browser scripts for safety. The static HTML and CSS are previewed, but live search, appearance switching, and code-copy controls must be tested in the <strong>exported</strong> website served over HTTP(S). Opening <code>index.html</code> through <code>file://</code> can prevent the search index from loading.</p>
+<p>Keep <code>paglora.js</code>, <code>paglora-search.js</code>, <code>search-index.json</code>, <code>styles.css</code>, and the rest of the export together. Do not upload just the HTML files.</p>
+<p>Next: <a href="images.html">Local images</a>, <a href="language-seo.html">Language and SEO</a>, or <a href="publishing.html">Publishing</a>.</p>
+</article>
+<nav class="page-pager" aria-label="Previous and next pages"><a class="previous" href="components.html"><small>← Previous</small><span>Markdown building blocks</span></a><a class="next" href="images.html"><small>Next →</small><span>Local images</span></a></nav>
+</div></main>
+<aside class="on-this-page" aria-label="Table of contents"><div class="toc-inner"><h2>On this page</h2><a class="toc-h2" href="#offline-search-with-minisearch">Offline search with MiniSearch</a><a class="toc-h2" href="#appearance-and-accent">Appearance and accent</a><a class="toc-h2" href="#page-reading-improvements">Page reading improvements</a><a class="toc-h2" href="#preview-versus-published-website">Preview versus published website</a></div></aside>
+</div>
+<footer class="site-footer"><div class="site-footer-inner"><span>Paglora · Open source · Built with Paglora</span><nav class="footer-links" aria-label="Site links"><a href="https://github.com/m1nsook/paglora/issues" rel="noopener noreferrer">Issues</a></nav></div></footer>
+<script defer src="paglora.js"></script>
+<script defer src="paglora-search.js"></script>
+
+</body>
+</html>
