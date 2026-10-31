@@ -93,13 +93,6 @@
       "navGroup": "Reference"
     },
     {
-      "id": "translations",
-      "title": "Translate Paglora",
-      "isPublic": true,
-      "layout": "docs",
-      "navGroup": "Reference"
-    },
-    {
       "id": "troubleshooting",
       "title": "Troubleshooting",
       "isPublic": true,

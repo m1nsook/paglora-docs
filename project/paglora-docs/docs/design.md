@@ -26,29 +26,6 @@ Choose **Light**, **Dark**, or **System** for the default appearance, then adjus
 > [!TIP]
 > If an accent appears to stay blue in dark mode, inspect `theme/custom.css`. A declaration such as `--brand: #72baff;` inside a dark-mode rule overrides the picker. Remove that override to let the site accent work in both modes.
 
-## Responsive documentation cards
-
-In **Design site → Theme → Documentation card layout**, choose how Markdown cards are displayed:
-
-| Card layout | Behavior |
-| --- | --- |
-| **Stacked** | Single full-width cards, preserving existing projects |
-| **Responsive grid** | Two or more adjacent Card blocks form balanced columns; narrow reading areas automatically collapse to one column |
-
-Use the **Card** block in Studio, or write:
-
-```markdown
-> [!CARD] Getting started
-> [Installation](installation.md) and first steps.
-
-> [!CARD] Publishing
-> [Deploy a static website](publishing.md).
-```
-
-Only *consecutive* cards become a group; ordinary paragraphs and headings separate groups. A single card stays a regular card. Grid mode uses the same sanitized content pipeline for Studio preview and static export, with responsive styling and reduced-motion support.
-
-The official Paglora Docs site selects **Responsive grid**, which makes the three feature cards on its homepage display in columns when there is room.
-
 ## Edit the actual project source
 
 Site settings live in `site.json`. New fields are optional and default to Classic/Original for existing projects:
@@ -57,7 +34,6 @@ Site settings live in `site.json`. New fields are optional and default to Classi
 {
   "siteLayout": "inset",
   "sitePalette": "graphite",
-  "cardLayout": "grid",
   "themeMode": "system",
   "accentColor": "#5B9EFF"
 }

@@ -2,12 +2,13 @@
   "title": "Paglora Docs",
   "description": "Build, customize, and publish beautiful documentation websites with Paglora.",
   "footerText": "Paglora · Open source · Built with Paglora",
+  "siteUrl": "https://m1nsook.github.io/paglora-docs/",
   "navigationPosition": "left",
   "headerAlignment": "left",
   "stickyHeader": true,
   "showFooter": true,
-  "contentWidth": 820,
-  "logoUrl": "",
+  "contentWidth": 800,
+  "logoUrl": "assets/paglora512x512-18e38dba083d91d0-0.png",
   "headerLinks": [
     {
       "label": "GitHub",
@@ -16,20 +17,31 @@
     {
       "label": "npm",
       "url": "https://www.npmjs.com/package/paglora"
+    },
+    {
+      "label": "Translation Hub",
+      "url": "https://github.com/m1nsook/paglora-lang"
     }
   ],
   "footerLinks": [
     {
       "label": "Issues",
       "url": "https://github.com/m1nsook/paglora/issues"
+    },
+    {
+      "label": "Translate with Paglora",
+      "url": "https://github.com/m1nsook/paglora-lang"
+    },
+    {
+      "label": "Paglora",
+      "url": "https://github.com/m1nsook/paglora"
     }
   ],
   "themeMode": "system",
-  "siteLayout": "inset",
+  "accentColor": "#2196f3",
+  "siteLayout": "classic",
   "sitePalette": "graphite",
-  "accentColor": "#5B9EFF",
-  "googleFontFamily": "",
+  "cardLayout": "stacked",
   "language": "en",
-  "siteUrl": "https://m1nsook.github.io/paglora-docs/",
-  "cardLayout": "grid"
+  "googleFontFamily": "Inter"
 }

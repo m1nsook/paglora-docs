@@ -45,11 +45,3 @@ These are static tags, not a guarantee of search-engine indexing or rich preview
 There is no built-in automatic Pages deployment yet. The official `paglora-docs` project is still private and not publicly hosted.
 
 Next: [Publishing a website](publishing.md) or [Search and appearance](search.md).
-
-## Language packages versus Markdown content
-
-**The website language setting does not translate your writing.** Your Markdown pages, page titles, descriptions, and navigation groups are authored separately by you.
-
-Paglora now uses [paglora-lang](https://github.com/m1nsook/paglora-lang) catalogs for reviewed interface messages. English is the fallback where a language pack is incomplete. Initial catalogs are English, Polish and Korean; translating the full Studio and website interface is ongoing.
-
-The Studio's own language preference is configured independently under **Settings → Studio language**. See [Translate Paglora](translations.md) for community contributions.
