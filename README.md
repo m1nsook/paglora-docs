@@ -16,14 +16,15 @@ This **public repository** contains the official Paglora documentation source an
 
 - [`project/paglora-docs/`](project/paglora-docs/) — the real Paglora v1 documentation project, including Markdown, page manifest, site settings, and custom CSS.
 - [`project/README.md`](project/README.md) — directions for validating and opening the project.
-- [`site/`](site/) — the generated static website deployed by GitHub Pages (never hand-edit generated files).
+- [`site/`](site/) — a legacy generated website snapshot, available for a manual rollback; the normal workflow builds from the source project.
 - [`reference/`](reference/) — publicly readable historical engineering/design notes in the repository, **not** pages on the generated website.
 - [`.github/workflows/validate-project.yml`](.github/workflows/validate-project.yml) — project validation with the released npm CLI.
-- [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) — deploys **only** the generated `site/` export to Pages when it exists.
+- [`.github/workflows/build-project-pages.yml`](.github/workflows/build-project-pages.yml) — rebuilds from the source project on pushes to main using Paglora's headless Rust renderer.
+- [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) — **manual-only** deployment of the legacy `site/` snapshot for rollback.
 
 ## Current status — October 31, 2026
 
-The source repository is **public**, and the first generated website is [deployed on GitHub Pages](https://m1nsook.github.io/paglora-docs/). Source changes alone do not automatically rebuild the live site: regenerate the static export with Paglora Studio and commit the updated `site/` files.
+The source repository is **public**, and the first generated website is [deployed on GitHub Pages](https://m1nsook.github.io/paglora-docs/). The source-driven workflow builds and deploys directly from `project/paglora-docs/` on pushes to main. Studio changes remain local until synchronized into this repository.
 
 The current [Paglora source](https://github.com/m1nsook/paglora) includes offline MiniSearch, local images, multilingual metadata, canonical URLs/sitemaps, coordinated light/dark site palettes, and a desktop 0.2.0 publishing report. The public npm CLI **`paglora@0.0.1-alpha.3`** remains available under the `alpha` tag.
 
@@ -50,12 +51,12 @@ Use the [Windows sync helper](scripts/sync-from-studio.ps1) to back up and insta
 
 ## Unattended source builds
 
-Once the [headless build workflow](.github/workflows/build-project-pages.yml) is merged and passes its first deployment, GitHub Actions will **build and deploy directly from `project/paglora-docs/` on every push to `main` that changes project files**. It checks out the Paglora source, sanitizes public Markdown, uses the same Rust HTML/site renderer as Studio, and deploys the generated artifact. No desktop session needs to remain running.
+The [headless build workflow](.github/workflows/build-project-pages.yml) is configured to **build and deploy directly from `project/paglora-docs/` on every push to `main` that changes project files**. It checks out the Paglora source, sanitizes public Markdown, uses the same Rust HTML/site renderer as Studio, and deploys the generated artifact. No desktop session needs to remain running.
 
 You can also start **Actions → Build and deploy Paglora Docs from source → Run workflow** manually. `site/` remains a legacy tracked snapshot, and the old deployment workflow becomes manual-only so stale files cannot accidentally overwrite a newer source build.
 
 **Important:** Saving changes in Studio is still local. Copy the edited Markdown, site settings, and images back into `project/paglora-docs/` using the sync helper, then push through GitHub Desktop. Only repository source pushes trigger the unattended build. The new workflow must pass its first production run before this is considered verified.
-## Update the live GitHub Pages website
+## Legacy manual snapshot deployment (rollback only)
 
 **Site root:** `https://m1nsook.github.io/paglora-docs/`
 
