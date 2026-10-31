@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "project/**"
+      - "scripts/**"
       - ".github/workflows/build-project-pages.yml"
   workflow_dispatch:
 
@@ -56,6 +57,8 @@ jobs:
           bun install --frozen-lockfile
           npm install --prefix tools/headless --no-audit --no-fund --package-lock=false --ignore-scripts
           bun packages/site-runtime/build.mjs
+      - name: Test live-deployment verifier
+        run: node --test scripts/verify-deployed-site.test.mjs
       - name: Validate official project source
         run: |
           node scripts/check-docs-source.mjs
@@ -98,3 +101,8 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify live HTML, hashed assets, and favicon match generated output
+        run: |
+          node scripts/verify-deployed-site.mjs \
+            "$RUNNER_TEMP/paglora-site" \
+            "${{ steps.deployment.outputs.page_url }}"
