@@ -64,6 +64,20 @@ To apply extra polish, open **Source** and edit your project's `theme/custom.css
 
 Use palette variables such as `var(--bg)`, `var(--fg)`, `var(--line)` and `var(--brand)` rather than hard-coding one mode's color. Custom CSS is project-owned and exported with your site.
 
+## Multiple CSS files and priority
+
+Open **Source → Theme** and choose **Add CSS** to create a separate stylesheet, such as `typography.css` or `components.css`. You can edit each file in Monaco and use the arrow controls to reorder the extra files. `custom.css` stays first for compatibility with existing projects.
+
+The cascade is always:
+
+1. Built-in `styles.css` from Paglora.
+2. Your project's `theme/custom.css`.
+3. Additional named files in `theme/styles.json`, from top to bottom.
+
+For example, if `typography.css` sets `h1 { letter-spacing: -0.02em; }` and `components.css` later sets `h1 { letter-spacing: -0.04em; }`, the latter wins on equal specificity. Preview and Build use the same order. The export combines your styles into a single `custom.css` while retaining source-file boundary comments; published pages do not refer to private source filenames.
+
+Stylesheet names are restricted to lowercase letters, digits and hyphens; up to twelve additional CSS files are supported. Each is limited to 256 KB, with a combined 512 KB limit. Old projects without `styles.json` continue using just `custom.css`.
+
 ## Preview and verify
 
 1. Check **Desktop**, **Tablet**, and **Mobile** widths.

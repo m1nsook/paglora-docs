@@ -24,7 +24,13 @@ The source files remain local and edits are automatically saved. Recent builds i
 
 Use **Design site** to manage header/footer links, content width, appearance, website accent, document language, optional published site URL, and logo images. The local logo import supports PNG, JPEG, WebP, and GIF files up to 5 MiB.
 
-Use **Source** to edit your project's `theme/custom.css` using Monaco. TSX/MDX component compilation is **not** supported yet.
+Use **Source** to edit your project's Markdown and CSS in Monaco. The Theme section shows `custom.css` and any additional registered stylesheets, with an ordered cascade you can change using the Up/Down controls. **Add CSS** creates a new named stylesheet; all files are local to the project.
+
+Styles apply in the same order in Preview and static Build: Paglora's built-in CSS, then `custom.css`, then extra files listed in `theme/styles.json` (last declaration wins). The generated `custom.css` export contains the combined source, with source comments showing the original file boundaries.
+
+Select a plain heading or paragraph on the canvas to open the anchored **Edit text** control. The draft previews in the iframe without saving to the Markdown source; **Save** commits through the editor, and **Cancel** restores the previous preview. Styled, linked, ambiguous, and private text intentionally cannot be changed by this shortcut.
+
+TSX/MDX component compilation is **not** supported.
 
 ## Preview versus published interactions
 
