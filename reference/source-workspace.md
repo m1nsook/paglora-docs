@@ -26,7 +26,7 @@ New projects contain `theme/custom.css` with commented examples. New Paglora pro
 
 CSS is applied after the generated `styles.css`, so the user project overrides default selectors. In **Source → Theme**, use **Add CSS** to add up to 12 named files. The arrow buttons reorder additional stylesheets; the base `custom.css` stays first for legacy compatibility.
 
-Order in `theme/styles.json` is authoritative for both preview and export. Files that are not registered in this manifest are not loaded. A changed CSS file must be explicitly saved to update the preview; Markdown saved in Source is rehydrated into the visual editor. Source metadata remains read-only.
+Order in `theme/styles.json` is authoritative for both preview and export. Files that are not registered in this manifest are not loaded. A changed CSS file must be explicitly saved to update the preview; Markdown saved in Source is rehydrated into the visual editor. Source's `pages.json` and `site.json` Monaco snapshots remain read-only. For schema-safe edits, use the **Structured metadata** form displayed below the current JSON: choose a page and update its title, visibility, layout and navigation group, or edit supported site title/description/footer/HTTPS root fields. **Apply metadata** runs a validated native transaction, updates the current editor/outline and refreshes the JSON and preview. The home page cannot be made private and IDs/URLs are never edited through this form.
 
 The static export contains:
 

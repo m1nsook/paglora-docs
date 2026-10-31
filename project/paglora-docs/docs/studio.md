@@ -32,6 +32,15 @@ Styles apply in the same order in Preview and static Build: Paglora's built-in C
 
 Select a plain heading or paragraph on the canvas to open the anchored **Edit text** control. The draft previews in the iframe without saving to the Markdown source; **Save** commits through the editor, and **Cancel** restores the previous preview. Styled, linked, ambiguous, and private text intentionally cannot be changed by this shortcut.
 
+Open **Source → pages.json** or **Source → site.json** to inspect the actual read-only project metadata. A **Structured metadata** form now appears below the JSON snapshot for permitted changes. You can edit page title, navigation group, layout and public visibility; Overview always remains public and page URLs never silently change. Site form fields include title, SEO description, footer text and canonical HTTPS URL. All changes use native schema validation and explicitly **Apply metadata**, then refresh the source and preview. Direct editing of raw JSON stays disabled.
+
+## Citations and reference lists
+
+In **Edit**, the text toolbar provides **Citation** for one validated HTTPS source and **References** for a multi-entry bibliography. Reference lists support author/organization, title, URL, optional year and access date, and basic APA-, MLA- and Chicago-style web reference formatting. The output is ordinary editable Markdown with a References heading and list, not a JavaScript widget.
+
+> [!NOTE]
+> These are accessible, basic web-source citation formats. They are not a complete scholarly citation engine for journal articles, DOI records, books or institutional rules.
+
 TSX/MDX component compilation is **not** supported.
 
 ## Preview versus published interactions

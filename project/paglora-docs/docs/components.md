@@ -35,6 +35,11 @@ Browse all currently supported, reusable Paglora Markdown components. Each entry
 
 - [Images](component-images.md) — Add bundled local PNG, JPEG, WebP or GIF assets.
 
+## Citations and bibliography
+
+- **Inline citation:** the visual text toolbar's Citation control inserts a safe Markdown link for an HTTPS reference and optional accessed date.
+- **Reference list:** choose References to enter multiple web sources and insert an editable Markdown References heading and linked list. APA/MLA/Chicago-style web templates are basic helpers, not comprehensive scholarly style compliance.
+
 ## Content
 
 - [Typography](component-typography.md) — Headings, emphasis, inline code, strike-through and quotations.
